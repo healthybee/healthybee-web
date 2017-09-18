@@ -3,7 +3,6 @@ import { orange500 } from 'material-ui/styles/colors';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import styled from 'styled-components';
-import logo from './images/logo.png';
 import './App.css';
 
 class App extends Component {
@@ -42,12 +41,10 @@ class App extends Component {
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
         <Wrapper>
-          <Title>
-            <img src={logo} width="80%" alt="healthylicious logo" />
-          </Title>
+          <Title>Healthy Bee</Title>
           <Subtitle>Coming Soon ...</Subtitle>
           <SubtitleSmall>Reach us:- Healthybee.fit@gmail.com / +91-8793580502 / +91-9764689306 for any queries.</SubtitleSmall>
-          <SubtitleSmall>Address:- Bhoir Palace, Next to SBI Bank, Dange Chowk, Pune, Maharashtra - 411033</SubtitleSmall>
+          <SubtitleSmall>Address:- shop no. 6 Alacrity commercial complex, behind Bitwise Terra Tower, by pass road Baner Pune 411045</SubtitleSmall>
         </Wrapper>
       </MuiThemeProvider>
     );
