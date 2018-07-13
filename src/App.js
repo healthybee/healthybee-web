@@ -53,8 +53,9 @@ class App extends Component {
             <img src={logo} alt="healthybee logo" title="logo"/>
           </LogoWrapper>
           <Subtitle>Coming Soon ...</Subtitle>
-          <SubtitleSmall>Reach us:- Healthybee.fit@gmail.com / +91-8793580502 / +91-9764689306 for any queries.</SubtitleSmall>
-          <SubtitleSmall>Address:- shop no. 6 Alacrity commercial complex, behind Bitwise Terra Tower, by pass road Baner Pune 411045</SubtitleSmall>
+          <SubtitleSmall>Reach us:- Healthybee.fit@gmail.com / +91-9975690709 / +91-8793580502 for any queries.</SubtitleSmall>
+          <SubtitleSmall>Address 1:- Shop no. 6 Alacrity commercial complex, behind Bitwise Terra Tower, by pass road Baner Pune 411045</SubtitleSmall>
+          <SubtitleSmall>Address 2:- Silver Sports Club, near by Mumbai-Bangalore highway, behind Vedanta society, Wakad, Pune 411057</SubtitleSmall>
         </Wrapper>
       </MuiThemeProvider>
     );
