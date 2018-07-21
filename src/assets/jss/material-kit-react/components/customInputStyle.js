@@ -1,8 +1,8 @@
 import {
-  primaryColor,
   dangerColor,
   successColor,
-  defaultFont
+  defaultFont,
+  warningColor
 } from "../../material-kit-react.js";
 
 const customInputStyle = {
@@ -17,7 +17,7 @@ const customInputStyle = {
       borderWidth: "1px !important"
     },
     "&:after": {
-      borderColor: primaryColor
+      borderColor: warningColor
     }
   },
   underlineError: {

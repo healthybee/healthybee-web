@@ -18,8 +18,8 @@ import Parallax from "../../components/Parallax/Parallax.js";
 import landingPageStyle from "../../assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
-import ProductSection from "./Sections/ProductSection.js";
-import TeamSection from "./Sections/TeamSection.js";
+// import ProductSection from "./Sections/ProductSection.js";
+// import TeamSection from "./Sections/TeamSection.js";
 import WorkSection from "./Sections/WorkSection.js";
 
 const dashboardRoutes = [];
@@ -32,7 +32,7 @@ class LandingPage extends React.Component {
         <Header
           color="transparent"
           routes={dashboardRoutes}
-          brand="Material Kit React"
+          brand="HealthyBee"
           // rightLinks={<HeaderLinks />}
           fixed
           changeColorOnScroll={{
@@ -68,9 +68,9 @@ class LandingPage extends React.Component {
         </Parallax>
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div className={classes.container}>
-            <ProductSection />
-            <TeamSection />
             <WorkSection />
+            {/* <ProductSection />
+            <TeamSection /> */}
           </div>
         </div>
         <Footer />
