@@ -11,7 +11,7 @@ import Header from "../../components/Header/Header.js";
 import Footer from "../../components/Footer/Footer.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
-// import Button from "../../components/CustomButtons/Button.js";
+import Button from "../../components/CustomButtons/Button.js";
 import Parallax from "../../components/Parallax/Parallax.js";
 // sections for this page
 // import HeaderLinks from "../../components/Header/HeaderLinks.js";
@@ -81,6 +81,24 @@ class Components extends React.Component {
             </Link>
           </GridItem> */}
           {/* <SectionExamples /> */}
+          <div className={classes.textCenter + " " + classes.sharingArea}>
+            <GridContainer justify="center">
+              <h3>Thank you for supporting us!</h3>
+            </GridContainer>
+            <Button color="twitter">
+              <i className={classes.socials + " fab fa-twitter"} /> Tweet
+            </Button>
+            <Button color="facebook">
+              <i className={classes.socials + " fab fa-facebook-square"} />{" "}
+              Share
+            </Button>
+            <Button color="google">
+              <i className={classes.socials + " fab fa-google-plus-g"} />Share
+            </Button>
+            <Button color="github">
+              <i className={classes.socials + " fab fa-github"} /> Star
+            </Button>
+          </div>
         </div>
         <Footer />
       </div>

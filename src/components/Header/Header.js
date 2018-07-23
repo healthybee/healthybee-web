@@ -13,6 +13,7 @@ import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
+import { Link } from "react-router-dom";
 // core components
 import headerStyle from "../../assets/jss/material-kit-react/components/headerStyle.js";
 
@@ -61,7 +62,7 @@ class Header extends React.Component {
     const {
       classes,
       color,
-      rightLinks,
+      // rightLinks,
       leftLinks,
       brand,
       fixed,
@@ -74,9 +75,9 @@ class Header extends React.Component {
       [classes.fixed]: fixed
     });
     const brandComponent = (
-      <Button className={classes.title}>
-        {brand}
-      </Button>
+      <Link to={'/'}>
+        <Button className={classes.title}>{brand}</Button>
+      </Link>
     );
     return (
       <AppBar className={appBarClasses}>
@@ -92,7 +93,16 @@ class Header extends React.Component {
             )}
           </div>
           <Hidden smDown implementation="css">
-            {rightLinks}
+          <Link to={'/about-us'} className={classes.link}>
+              <Button color="primary" size="lg" simple>
+                About Us
+              </Button>
+            </Link>
+            <Link to={'/contact-us'} className={classes.link}>
+              <Button color="primary" size="lg" simple>
+                Contact Us
+              </Button>
+            </Link>
           </Hidden>
           <Hidden mdUp>
             <IconButton
@@ -116,7 +126,23 @@ class Header extends React.Component {
           >
             <div className={classes.appResponsive}>
               {leftLinks}
-              {rightLinks}
+              <Link to={'/'} className={classes.link}>
+                <Button color="primary" size="lg" simple>
+                  Home
+                </Button>
+              </Link>
+              <br />
+              <Link to={'/about-us'} className={classes.link}>
+                <Button color="primary" size="lg" simple>
+                  About Us
+                </Button>
+              </Link>
+              <br />
+              <Link to={'/contact-us'} className={classes.link}>
+                <Button color="primary" size="lg" simple>
+                  Contact Us
+                </Button>
+              </Link>     
             </div>
           </Drawer>
         </Hidden>

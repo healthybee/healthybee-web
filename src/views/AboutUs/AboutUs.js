@@ -17,7 +17,7 @@ import GridItem from "../../components/Grid/GridItem.js";
 import NavPills from "../../components/NavPills/NavPills.js";
 import Parallax from "../../components/Parallax/Parallax.js";
 
-import profile from "../../assets/img/faces/christian.jpg";
+// import profile from "../../assets/img/faces/christian.jpg";
 
 import studio1 from "../../assets/img/examples/studio-1.jpg";
 import studio2 from "../../assets/img/examples/studio-2.jpg";
@@ -35,11 +35,11 @@ import profilePageStyle from "../../assets/jss/material-kit-react/views/profileP
 class ProfilePage extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
-    const imageClasses = classNames(
-      classes.imgRaised,
-      classes.imgRoundedCircle,
-      classes.imgFluid
-    );
+    // const imageClasses = classNames(
+    //   classes.imgRaised,
+    //   classes.imgRoundedCircle,
+    //   classes.imgFluid
+    // );
     const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
     return (
       <div>
@@ -54,19 +54,14 @@ class ProfilePage extends React.Component {
           }}
           {...rest}
         />
-        <Parallax small filter image={require("../../assets/img/profile-bg.jpg")} />
+        <Parallax small filter image={require("../../assets/img/backlit-clouds-dusk.jpg")} />
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div>
             <div className={classes.container}>
               <GridContainer justify="center">
                 <GridItem xs={12} sm={12} md={6}>
                   <div className={classes.profile}>
-                    <div>
-                      <img src={profile} alt="..." className={imageClasses} />
-                    </div>
                     <div className={classes.name}>
-                      <h3 className={classes.title}>Christian Louboutin</h3>
-                      <h6>DESIGNER</h6>
                       <Button justIcon link className={classes.margin5}>
                         <i className={"fab fa-twitter"} />
                       </Button>
@@ -81,18 +76,20 @@ class ProfilePage extends React.Component {
                 </GridItem>
               </GridContainer>
               <div className={classes.description}>
-                <p>
-                  An artist of considerable range, Chet Faker — the name taken
-                  by Melbourne-raised, Brooklyn-based Nick Murphy — writes,
-                  performs and records all of his own music, giving it a warm,
-                  intimate feel with a solid groove structure.{" "}
-                </p>
+              <h1 className={classes.title}>Your Story Starts Health.</h1>
+                <h4>
+                  At HealthyBee, our mission is to serve healthy food every day.
+  We provide the inspirational, hygienic food need to make healthy eating a way of life.
+  Our specially designed menu offers delicious recipes, balanced nutritional diet plans, and new ways to make healthy cuisine choices more exciting.
+  We are about moderation and balance—not strict rules or fad diets—because for healthy eating to become a way of life,
+it should be accessible, sustainable, inspiring and—above all—delicious.{" "}
+                </h4>
               </div>
               <GridContainer justify="center">
                 <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
                   <NavPills
                     alignCenter
-                    color="primary"
+                    color="warning"
                     tabs={[
                       {
                         tabButton: "Studio",
