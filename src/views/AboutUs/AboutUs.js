@@ -54,7 +54,7 @@ class ProfilePage extends React.Component {
           }}
           {...rest}
         />
-        <Parallax small filter image={require("../../assets/img/backlit-clouds-dusk.jpg")} />
+        <Parallax small filter image={require("../../assets/img/food/beach-hat-cactus-plant-delicious.jpg")} />
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div>
             <div className={classes.container}>
@@ -76,7 +76,7 @@ class ProfilePage extends React.Component {
                 </GridItem>
               </GridContainer>
               <div className={classes.description}>
-              <h1 className={classes.title}>Your Story Starts Health.</h1>
+              <h1 className={classes.title}>Our Story Starts Health.</h1>
                 <h4>
                   At HealthyBee, our mission is to serve healthy food every day.
   We provide the inspirational, hygienic food need to make healthy eating a way of life.

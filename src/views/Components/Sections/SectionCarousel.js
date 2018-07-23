@@ -10,9 +10,12 @@ import GridContainer from "../../../components/Grid/GridContainer.js";
 import GridItem from "../../../components/Grid/GridItem.js";
 import Card from "../../../components/Card/Card.js";
 import carouselStyle from "../../../assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
-import image1 from "../../../assets/img/food/mango-custard.JPG";
-import image2 from "../../../assets/img/food/brown-rice-salad.JPG";
-import image3 from "../../../assets/img/food/half-fry-omelette.JPG";
+import image4 from "../../../assets/img/food/avocado-cooked.jpg";
+import image5 from "../../../assets/img/food/buffet-chicken-cooking.jpg";
+import image6 from "../../../assets/img/food/bowl-delicious-diet.jpg";
+import image7 from "../../../assets/img/food/banana-bread-bread-breakfast.jpg";
+import image8 from "../../../assets/img/food/bread-breakfast-close-up.jpg";
+
 
 class SectionCarousel extends React.Component {
   render() {
@@ -37,36 +40,57 @@ class SectionCarousel extends React.Component {
                 <Carousel {...settings}>
                   <div>
                     <img
-                      src={image1}
-                      alt="First slide"
-                      className="slick-image"
-                    />
-                    <div className="slick-caption">
-                      <h3>
-                        Mango Custard
-                      </h3>
-                    </div>
-                  </div>
-                  <div>
-                    <img
-                      src={image2}
-                      alt="Second slide"
-                      className="slick-image"
-                    />
-                    <div className="slick-caption">
-                      <h3>
-                        Brown Rice Salad
-                      </h3>
-                    </div>
-                  </div>
-                  <div>
-                    <img
-                      src={image3}
+                      src={image4}
                       alt="Third slide"
                       className="slick-image"
+                      height="350px"
                     />
                     <div className="slick-caption">
-                      <h3>Half Fry Omelette</h3>
+                      <h3>Peri Peri Grilled Chicken Salad</h3>
+                    </div>
+                  </div>
+                  <div>
+                    <img
+                      src={image5}
+                      alt="Third slide"
+                      className="slick-image"
+                      height="350px"
+                    />
+                    <div className="slick-caption">
+                      <h3>Jamacian Grilled Chicken Salad</h3>
+                    </div>
+                  </div>
+                  <div>
+                    <img
+                      src={image6}
+                      alt="Third slide"
+                      className="slick-image"
+                      height="350px"
+                    />
+                    <div className="slick-caption">
+                      <h3>Fresh Fruit Salad</h3>
+                    </div>
+                  </div>
+                  <div>
+                    <img
+                      src={image7}
+                      alt="Third slide"
+                      className="slick-image"
+                      height="350px"
+                    />
+                    <div className="slick-caption">
+                      <h3>Fruit Museli Breakfast</h3>
+                    </div>
+                  </div>
+                  <div>
+                    <img
+                      src={image8}
+                      alt="Third slide"
+                      className="slick-image"
+                      height="350px"
+                    />
+                    <div className="slick-caption">
+                      <h3>Boiled Egg Salad</h3>
                     </div>
                   </div>
                 </Carousel>

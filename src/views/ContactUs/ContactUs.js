@@ -11,7 +11,7 @@ import Header from "../../components/Header/Header.js";
 import Footer from "../../components/Footer/Footer.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
-import Button from "../../components/CustomButtons/Button.js";
+// import Button from "../../components/CustomButtons/Button.js";
 // import HeaderLinks from "../../components/Header/HeaderLinks.js";
 import Parallax from "../../components/Parallax/Parallax.js";
 
@@ -41,27 +41,16 @@ class LandingPage extends React.Component {
           }}
           {...rest}
         />
-        <Parallax filter image={require("../../assets/img/landing-bg.jpg")}>
+        <Parallax filter small image={require("../../assets/img/food/beverages-brunch-cocktail.jpg")}>
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
-                <h1 className={classes.title}>Your Story Starts With Us.</h1>
+                <h1 className={classes.title}>Want to meet us.</h1>
                 <h4>
-                  Every landing page needs a small description after the big
-                  bold title, that's why we added this text here. Add here all
-                  the information that can make you or your product create the
-                  first impression.
+                  If you have anything to discuss or just have to hang out with us, please
+                  write us an email given below or give a call or send us your message. We would
+                  love to hear from you.
                 </h4>
-                <br />
-                <Button
-                  color="danger"
-                  size="lg"
-                  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fas fa-play" />Watch video
-                </Button>
               </GridItem>
             </GridContainer>
           </div>
