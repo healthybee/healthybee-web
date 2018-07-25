@@ -16,7 +16,7 @@ import GridItem from "../../components/Grid/GridItem.js";
 import Parallax from "../../components/Parallax/Parallax.js";
 
 import landingPageStyle from "../../assets/jss/material-kit-react/views/landingPage.js";
-
+import AddressSection from './Sections/AddressSection.js';
 // Sections for this page
 // import ProductSection from "./Sections/ProductSection.js";
 // import TeamSection from "./Sections/TeamSection.js";
@@ -41,7 +41,7 @@ class LandingPage extends React.Component {
           }}
           {...rest}
         />
-        <Parallax filter small image={require("../../assets/img/food/beverages-brunch-cocktail.jpg")}>
+        <Parallax filter image={require("../../assets/img/food/beverages-brunch-cocktail.jpg")}>
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
@@ -56,7 +56,24 @@ class LandingPage extends React.Component {
           </div>
         </Parallax>
         <div className={classNames(classes.main, classes.mainRaised)}>
-          <div className={classes.container}>
+          <div className={classes.container} >
+            <h4 className={classes.title}>Branches</h4>
+            <GridContainer>
+              <GridItem xs={12} sm={12} md={6}>
+                <AddressSection
+                  branchName="HealthyBee, Wakad."
+                  branchAddress="Inside Silver Sports Club, Behind Vedanta Society, Shankar Kalat Nagar, Wakad, Pune - 411057"
+                  branchEmail="healthybee.fit@gmail.com"
+                  branchContactNumber="+91-92847 40370" />
+              </GridItem>
+              <GridItem xs={12} sm={12} md={6}>
+                <AddressSection
+                  branchName="HealthyBee, Baner."
+                  branchAddress="Shop no. 6,  Alacrity commercial complex, Behind Bitwise Terra Tower, By pass road, Pune - 411045"
+                  branchEmail="healthybee.fit@gmail.com"
+                  branchContactNumber="+91-99756 90709" />
+              </GridItem>
+            </GridContainer>
             <WorkSection />
             {/* <ProductSection />
             <TeamSection /> */}
