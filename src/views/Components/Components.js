@@ -42,7 +42,7 @@ class Components extends React.Component {
           color="primary"
           {...rest}
         />
-        <Parallax image={require("../../assets/img/bg4.jpg")}>
+        <Parallax image={require("../../assets/img/bg4.jpeg")}>
           <div className={classes.container}>
             <GridContainer>
               <GridItem>
