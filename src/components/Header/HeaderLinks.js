@@ -68,7 +68,7 @@ function HeaderLinks({ ...props }) {
             color="transparent"
             className={classes.navLink}
           >
-            <i className={classes.socialIcons + " fab fa-twitter"} />
+            <i className={classes.socialIcons + " fa fa-twitter"} />
           </Button>
         </Tooltip>
       </ListItem>
@@ -85,7 +85,7 @@ function HeaderLinks({ ...props }) {
             target="_blank"
             className={classes.navLink}
           >
-            <i className={classes.socialIcons + " fab fa-facebook"} />
+            <i className={classes.socialIcons + " fa fa-facebook"} />
           </Button>
         </Tooltip>
       </ListItem>
@@ -102,7 +102,7 @@ function HeaderLinks({ ...props }) {
             target="_blank"
             className={classes.navLink}
           >
-            <i className={classes.socialIcons + " fab fa-instagram"} />
+            <i className={classes.socialIcons + " fa fa-instagram"} />
           </Button>
         </Tooltip>
       </ListItem>

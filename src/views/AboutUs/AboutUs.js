@@ -44,14 +44,10 @@ class ProfilePage extends React.Component {
     return (
       <div>
         <Header
-          color="transparent"
+          color="primary"
           brand="HealthyBee"
           // rightLinks={<HeaderLinks />}
           fixed
-          changeColorOnScroll={{
-            height: 200,
-            color: "white"
-          }}
           {...rest}
         />
         <Parallax small filter image={require("../../assets/img/food/beach-hat-cactus-plant-delicious.jpg")} />
@@ -63,13 +59,13 @@ class ProfilePage extends React.Component {
                   <div className={classes.profile}>
                     <div className={classes.name}>
                       <Button justIcon link className={classes.margin5}>
-                        <i className={"fab fa-twitter"} />
+                        <i className={"fa fa-twitter"} />
                       </Button>
                       <Button justIcon link className={classes.margin5}>
-                        <i className={"fab fa-instagram"} />
+                        <i className={"fa fa-instagram"} />
                       </Button>
                       <Button justIcon link className={classes.margin5}>
-                        <i className={"fab fa-facebook"} />
+                        <i className={"fa fa-facebook"} />
                       </Button>
                     </div>
                   </div>

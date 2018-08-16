@@ -39,11 +39,7 @@ class Components extends React.Component {
           brand="HealthyBee"
           // rightLinks={<HeaderLinks />}
           fixed
-          color="transparent"
-          changeColorOnScroll={{
-            height: 400,
-            color: "white"
-          }}
+          color="primary"
           {...rest}
         />
         <Parallax image={require("../../assets/img/bg4.jpg")}>
@@ -86,17 +82,17 @@ class Components extends React.Component {
               <h3>Thank you for supporting us!</h3>
             </GridContainer>
             <Button color="twitter">
-              <i className={classes.socials + " fab fa-twitter"} /> Tweet
+              <i className={classes.socials + " fa fa-twitter fa-2x"} />&nbsp;&nbsp;Tweet
             </Button>
             <Button color="facebook">
-              <i className={classes.socials + " fab fa-facebook-square"} />{" "}
+              <i className={classes.socials + " fa fa-facebook-square fa-2x"} />&nbsp;&nbsp;
               Share
             </Button>
             <Button color="google">
-              <i className={classes.socials + " fab fa-google-plus-g"} />Share
+              <i className={classes.socials + " fa fa-google-plus fa-2x"} />&nbsp;&nbsp;Share
             </Button>
             <Button color="github">
-              <i className={classes.socials + " fab fa-github"} /> Star
+              <i className={classes.socials + " fa fa-github fa-2x"} /> &nbsp;&nbsp;Star
             </Button>
           </div>
         </div>
