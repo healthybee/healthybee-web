@@ -58,21 +58,21 @@ class ProfilePage extends React.Component {
                 <GridItem xs={12} sm={12} md={6}>
                   <div className={classes.profile}>
                     <div className={classes.name}>
-                      <Button justIcon link className={classes.margin5}>
+                      {/* <Button justIcon link className={classes.margin5}>
                         <i className={"fa fa-twitter"} />
+                      </Button> */}
+                      <Button justIcon link className={classes.margin5} href="https://www.facebook.com/healthybee.fit" target="_blank">
+                        <i className={"fa fa-facebook fa-2x"} />
                       </Button>
-                      <Button justIcon link className={classes.margin5}>
-                        <i className={"fa fa-instagram"} />
-                      </Button>
-                      <Button justIcon link className={classes.margin5}>
-                        <i className={"fa fa-facebook"} />
+                      <Button justIcon link className={classes.margin5} href="https://www.instagram.com/healthybee.fit" target="_blank">
+                        <i className={"fa fa-instagram fa-2x"} />
                       </Button>
                     </div>
                   </div>
                 </GridItem>
               </GridContainer>
               <div className={classes.description}>
-              <h1 className={classes.title}>Our Story Starts Health.</h1>
+                <h1 className={classes.title}>Our Story Starts Health.</h1>
                 <h4>
                   At HealthyBee, our mission is to serve healthy food every day.
   We provide the inspirational, hygienic food need to make healthy eating a way of life.

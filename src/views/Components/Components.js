@@ -81,18 +81,15 @@ class Components extends React.Component {
             <GridContainer justify="center">
               <h3>Thank you for supporting us!</h3>
             </GridContainer>
-            <Button color="twitter">
-              <i className={classes.socials + " fa fa-twitter fa-2x"} />&nbsp;&nbsp;Tweet
-            </Button>
-            <Button color="facebook">
+            <Button color="facebook" href="https://www.facebook.com/healthybee.fit" target="_blank">
               <i className={classes.socials + " fa fa-facebook-square fa-2x"} />&nbsp;&nbsp;
-              Share
+              Facebook
             </Button>
-            <Button color="google">
-              <i className={classes.socials + " fa fa-google-plus fa-2x"} />&nbsp;&nbsp;Share
-            </Button>
-            <Button color="github">
-              <i className={classes.socials + " fa fa-github fa-2x"} /> &nbsp;&nbsp;Star
+            {/* <Button color="google">
+              <i className={classes.socials + " fa fa-google-plus fa-2x"} />&nbsp;&nbsp;Google
+            </Button> */}
+            <Button color="instagram" href="https://www.instagram.com/healthybee.fit" target="_blank">
+              <i className={classes.socials + " fa fa-instagram fa-2x"} />&nbsp;&nbsp;Instagram
             </Button>
           </div>
         </div>
