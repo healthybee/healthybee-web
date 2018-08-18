@@ -10,11 +10,11 @@ import GridContainer from "../../../components/Grid/GridContainer.js";
 import GridItem from "../../../components/Grid/GridItem.js";
 import Card from "../../../components/Card/Card.js";
 import carouselStyle from "../../../assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
-import image4 from "../../../assets/img/food/avocado-cooked.jpg";
+import image4 from "../../../assets/img/food/avocado-cooked.jpeg";
 import image5 from "../../../assets/img/food/buffet-chicken-cooking.jpg";
-import image6 from "../../../assets/img/food/bowl-delicious-diet.jpg";
-import image7 from "../../../assets/img/food/banana-bread-bread-breakfast.jpg";
-import image8 from "../../../assets/img/food/bread-breakfast-close-up.jpg";
+import image6 from "../../../assets/img/food/bowl-delicious-diet.jpeg";
+import image7 from "../../../assets/img/food/banana-bread-bread-breakfast.jpeg";
+import image8 from "../../../assets/img/food/bread-breakfast-close-up.jpeg";
 
 
 class SectionCarousel extends React.Component {
