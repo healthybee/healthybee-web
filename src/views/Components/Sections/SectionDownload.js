@@ -88,17 +88,17 @@ class SectionDownload extends React.Component {
                 <h3>Thank you for supporting us!</h3>
               </GridContainer>
               <Button color="twitter">
-                <i className={classes.socials + " fab fa-twitter"} /> Tweet
+                <i className={classes.socials + " fa fa-twitter"} /> Tweet
             </Button>
               <Button color="facebook">
-                <i className={classes.socials + " fab fa-facebook-square"} />{" "}
+                <i className={classes.socials + " fa fa-facebook-square"} />{" "}
                 Share
             </Button>
               <Button color="google">
-                <i className={classes.socials + " fab fa-google-plus-g"} />Share
+                <i className={classes.socials + " fa fa-google-plus-g"} />Share
             </Button>
               <Button color="github">
-                <i className={classes.socials + " fab fa-github"} /> Star
+                <i className={classes.socials + " fa fa-github"} /> Star
             </Button>
             </div>
           </div>

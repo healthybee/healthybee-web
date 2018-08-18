@@ -68,7 +68,7 @@ function HeaderLinks({ ...props }) {
             color="transparent"
             className={classes.navLink}
           >
-            <i className={classes.socialIcons + " fa fa-twitter"} />
+            <i className={classes.socialIcons + "fa fa-twitter"} />
           </Button>
         </Tooltip>
       </ListItem>
