@@ -3,28 +3,31 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^1.4.0",
+    "@material-ui/core": "^1.5.1",
     "@material-ui/icons": "^1.1.0",
-    "ajv": "^6.5.2",
+    "ajv": "^6.5.3",
     "axios": "^0.18.0",
     "history": "^4.7.2",
     "moment": "^2.22.2",
-    "react": "^16.4.1",
-    "react-datetime": "^2.14.0",
-    "react-dom": "^16.4.1",
+    "react": "^16.4.2",
+    "react-datetime": "^2.15.0",
+    "react-dom": "^16.4.2",
     "react-nouislider": "^2.0.1",
-    "react-popper": "^1.0.0",
+    "react-popper": "^1.0.2",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "react-slick": "^0.23.1",
-    "react-swipeable-views": "^0.12.15",
-    "styled-components": "^2.1.2"
+    "react-swipeable-views": "^0.12.16",
+    "styled-components": "^2.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "@babel/runtime": "^7.0.0-beta.55"
   }
 }
