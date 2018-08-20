@@ -13,7 +13,8 @@ import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
-import logo from '../../images/logo.jpg'
+import logo1 from '../../images/logo1.png'
+import logo2 from '../../images/logo2.png'
 import { Link } from "react-router-dom";
 // core components
 import headerStyle from "../../assets/jss/material-kit-react/components/headerStyle.js";
@@ -77,7 +78,9 @@ class Header extends React.Component {
     const brandComponent = (
       <Link to={'/'}>
         {/* <Button className={classes.title}>{brand}</Button> */}
-        <img src={logo} height="50px" alt="logo" />
+        <img src={logo2} height="55px" alt="logo1" />
+        <img src={logo1} height="40px" alt="logo2" />
+        {/* <sup><i className="fa fa-copyright"/></sup> */}
       </Link>
     );
     return (

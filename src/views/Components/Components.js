@@ -39,7 +39,7 @@ class Components extends React.Component {
         <Header
           brand="HealthyBee"
           fixed
-          color="warning"
+          color="primary"
           {...rest}
         />
         <Parallax image={require("../../assets/img/bg4.jpeg")}>
@@ -53,8 +53,6 @@ class Components extends React.Component {
                   </h3><br/>
                   <Button 
                     color="warning"
-                    variant=""
-                    outlined
                     href="https://www.swiggy.com/pune/healthybee-baner-baner"
                     target="_blank"
                     round>
