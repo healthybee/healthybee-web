@@ -21,9 +21,10 @@ import Parallax from "../../components/Parallax/Parallax.js";
 // import SectionTabs from "./Sections/SectionTabs.js";
 // import SectionPills from "./Sections/SectionPills.js";
 // import SectionNotifications from "./Sections/SectionNotifications.js";
-// import SectionTypography from "./Sections/SectionTypography.js";
+import SectionTypography from "./Sections/SectionTypography.js";
 // import SectionJavascript from "./Sections/SectionJavascript.js";
 import SectionCarousel from "./Sections/SectionCarousel.js";
+import image from "../../assets/img/faces/avatar.jpg";
 // import SectionCompletedExamples from "./Sections/SectionCompletedExamples.js";
 // import SectionLogin from "./Sections/SectionLogin.js";
 // import SectionExamples from "./Sections/SectionExamples.js";
@@ -70,10 +71,11 @@ class Components extends React.Component {
           {/* <SectionTabs />
           <SectionPills /> */}
           {/* <SectionNotifications />
-          <SectionTypography /> */}
+           */}
           {/* <SectionJavascript /> */}
           {/* <SectionDownload /> */}
           <SectionCarousel />
+          <SectionTypography />
           {/* <SectionCompletedExamples /> */}
           {/* <SectionLogin />
           <GridItem md={12} className={classes.textCenter}>
@@ -86,6 +88,7 @@ class Components extends React.Component {
           {/* <SectionExamples /> */}
           <div className={classes.textCenter + " " + classes.sharingArea}>
           </div>
+          
         </div>
         <Footer />
       </div>

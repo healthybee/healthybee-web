@@ -97,6 +97,11 @@ class Header extends React.Component {
               )}
           </div>
           <Hidden smDown implementation="css">
+            <Link to={'/menu'} className={classes.link}>
+              <Button color="rose" size="lg" simple>
+                Menu
+              </Button>
+            </Link>
             <Link to={'/about-us'} className={classes.link}>
               <Button color="rose" size="lg" simple>
                 About Us
