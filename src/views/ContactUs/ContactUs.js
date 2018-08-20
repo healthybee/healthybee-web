@@ -59,7 +59,7 @@ class LandingPage extends React.Component {
                 <AddressSection
                   branchName="HealthyBee, Wakad."
                   branchAddress="Inside Silver Sports Club, Behind Vedanta Society, Shankar Kalat Nagar, Wakad, Pune - 411057"
-                  branchEmail="healthybee.fit@gmail.com"
+                  branchEmail="healthybee.fit.wakad@gmail.com"
                   branchContactNumber="+91-92847 40370" />
               </GridItem>
               <GridItem xs={12} sm={12} md={6}>

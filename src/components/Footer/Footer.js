@@ -73,17 +73,17 @@ function Footer({ ...props }) {
       </Tooltip>
 
       <Tooltip
-          id="google-google"
-          title="Follow us on google plus"
+          id="zomato"
+          title="Follow us on zomato"
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}>
         <Button
           justIcon
           round
           color="google"
-          href="https://plus.google.com/u/0/110856492103386293682"
+          href="https://www.zomato.com/pune/healthybee-baner"
           target="_blank">
-          <i className={"fa fa-google-plus"} />
+          <b>Z</b>
         </Button>
       </Tooltip>
 

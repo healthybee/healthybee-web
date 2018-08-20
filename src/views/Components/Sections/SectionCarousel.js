@@ -31,11 +31,9 @@ class SectionCarousel extends React.Component {
     return (
       <div className={classes.section}>
         <div className={classes.container}>
-          <GridContainer className={classes.textCenter} justify="center">
+          <GridContainer justify="center">
+            <h2>Our Popular Healthy Cuisine</h2>
             <GridItem xs={12} sm={12} md={8}>
-            <h2>Our popular healthy cuisine</h2>
-            </GridItem>
-            <GridItem xs={12} sm={12} md={8} className={classes.marginAuto}>
               <Card carousel>
                 <Carousel {...settings}>
                   <div>

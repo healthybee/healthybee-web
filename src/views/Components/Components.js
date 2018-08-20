@@ -11,8 +11,9 @@ import Header from "../../components/Header/Header.js";
 import Footer from "../../components/Footer/Footer.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
-// import Button from "../../components/CustomButtons/Button.js";
+import Button from "../../components/CustomButtons/Button.js";
 import Parallax from "../../components/Parallax/Parallax.js";
+// import Badge from "../../components/Badge/Badge.js";
 // sections for this page
 // import HeaderLinks from "../../components/Header/HeaderLinks.js";
 // import SectionBasics from "./Sections/SectionBasics.js";
@@ -37,7 +38,6 @@ class Components extends React.Component {
       <div>
         <Header
           brand="HealthyBee"
-          // rightLinks={<HeaderLinks />}
           fixed
           color="primary"
           {...rest}
@@ -50,7 +50,16 @@ class Components extends React.Component {
                   <h1 className={classes.title}>Eat Right. <br/> Love Yourself.</h1>
                   <h3 className={classes.subtitle}>
                     Happiness starts with healthy food.
-                  </h3>
+                  </h3><br/>
+                  <Button 
+                    color="warning"
+                    variant=""
+                    outlined
+                    href="https://www.swiggy.com/pune/healthybee-baner-baner"
+                    target="_blank"
+                    round>
+                    Order Online
+                  </Button>
                 </div>
               </GridItem>
             </GridContainer>
