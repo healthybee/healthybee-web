@@ -10,7 +10,6 @@ import Favorite from "@material-ui/icons/Favorite";
 // core components
 import Header from "../../components/Header/Header.js";
 import Footer from "../../components/Footer/Footer.js";
-import Button from "../../components/CustomButtons/Button.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
 // import HeaderLinks from "../../components/Header/HeaderLinks.js";
@@ -35,42 +34,19 @@ import profilePageStyle from "../../assets/jss/material-kit-react/views/profileP
 class ProfilePage extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
-    // const imageClasses = classNames(
-    //   classes.imgRaised,
-    //   classes.imgRoundedCircle,
-    //   classes.imgFluid
-    // );
     const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
     return (
       <div>
         <Header
           color="primary"
           brand="HealthyBee"
-          // rightLinks={<HeaderLinks />}
           fixed
-          {...rest}
-        />
+          {...rest}/>
+
         <Parallax small filter image={require("../../assets/img/food/beach-hat-cactus-plant-delicious.jpeg")} />
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div>
             <div className={classes.container}>
-              <GridContainer justify="center">
-                <GridItem xs={12} sm={12} md={6}>
-                  <div className={classes.profile}>
-                    <div className={classes.name}>
-                      {/* <Button justIcon link className={classes.margin5}>
-                        <i className={"fa fa-twitter"} />
-                      </Button> */}
-                      <Button justIcon link className={classes.margin5} href="https://www.facebook.com/healthybee.fit" target="_blank">
-                        <i className={"fa fa-facebook fa-2x"} />
-                      </Button>
-                      <Button justIcon link className={classes.margin5} href="https://www.instagram.com/healthybee.fit" target="_blank">
-                        <i className={"fa fa-instagram fa-2x"} />
-                      </Button>
-                    </div>
-                  </div>
-                </GridItem>
-              </GridContainer>
               <div className={classes.description}>
                 <h1 className={classes.title}>Our Story Starts Health.</h1>
                 <h4>

@@ -95,12 +95,12 @@ class Header extends React.Component {
           </div>
           <Hidden smDown implementation="css">
             <Link to={'/about-us'} className={classes.link}>
-              <Button color="primary" size="lg" simple>
+              <Button color="rose" size="lg" simple>
                 About Us
               </Button>
             </Link>
             <Link to={'/contact-us'} className={classes.link}>
-              <Button color="primary" size="lg" simple>
+              <Button color="rose" size="lg" simple>
                 Contact Us
               </Button>
             </Link>
@@ -128,19 +128,19 @@ class Header extends React.Component {
             <div className={classes.appResponsive}>
               {leftLinks}
               <Link to={'/'} className={classes.link}>
-                <Button color="primary" size="lg" simple>
+                <Button color="rose" size="lg" simple>
                   Home
                 </Button>
               </Link>
               <br />
               <Link to={'/about-us'} className={classes.link}>
-                <Button color="primary" size="lg" simple>
+                <Button color="rose" size="lg" simple>
                   About Us
                 </Button>
               </Link>
               <br />
               <Link to={'/contact-us'} className={classes.link}>
-                <Button color="primary" size="lg" simple>
+                <Button color="rose" size="lg" simple>
                   Contact Us
                 </Button>
               </Link>

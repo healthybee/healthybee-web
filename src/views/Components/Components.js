@@ -11,7 +11,7 @@ import Header from "../../components/Header/Header.js";
 import Footer from "../../components/Footer/Footer.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
-import Button from "../../components/CustomButtons/Button.js";
+// import Button from "../../components/CustomButtons/Button.js";
 import Parallax from "../../components/Parallax/Parallax.js";
 // sections for this page
 // import HeaderLinks from "../../components/Header/HeaderLinks.js";
@@ -78,19 +78,6 @@ class Components extends React.Component {
           </GridItem> */}
           {/* <SectionExamples /> */}
           <div className={classes.textCenter + " " + classes.sharingArea}>
-            <GridContainer justify="center">
-              <h3>Thank you for supporting us!</h3>
-            </GridContainer>
-            <Button color="facebook" href="https://www.facebook.com/healthybee.fit" target="_blank">
-              <i className={classes.socials + " fa fa-facebook-square fa-2x"} />&nbsp;&nbsp;
-              Facebook
-            </Button>
-            {/* <Button color="google">
-              <i className={classes.socials + " fa fa-google-plus fa-2x"} />&nbsp;&nbsp;Google
-            </Button> */}
-            <Button color="instagram" href="https://www.instagram.com/healthybee.fit" target="_blank">
-              <i className={classes.socials + " fa fa-instagram fa-2x"} />&nbsp;&nbsp;Instagram
-            </Button>
           </div>
         </div>
         <Footer />
