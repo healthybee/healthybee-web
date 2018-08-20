@@ -14,7 +14,6 @@ import GridItem from "../../components/Grid/GridItem.js";
 // import Button from "../../components/CustomButtons/Button.js";
 // import HeaderLinks from "../../components/Header/HeaderLinks.js";
 import Parallax from "../../components/Parallax/Parallax.js";
-
 import landingPageStyle from "../../assets/jss/material-kit-react/views/landingPage.js";
 import AddressSection from './Sections/AddressSection.js';
 // Sections for this page
@@ -37,11 +36,11 @@ class LandingPage extends React.Component {
           fixed
           {...rest}
         />
-        <Parallax filter image={require("../../assets/img/food/beverages-brunch-cocktail.jpg")}>
+        <Parallax small filter image={require("../../assets/img/food/beverages-brunch-cocktail.jpg")}>
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
-                <h1 className={classes.title}>Want to meet us.</h1>
+                <h2 className={classes.title}>Want to meet us.</h2>
                 <h4>
                   If you have anything to discuss or just have to hang out with us, please
                   write us an email given below or give a call or send us your message. We would
@@ -51,10 +50,11 @@ class LandingPage extends React.Component {
             </GridContainer>
           </div>
         </Parallax>
-        <div className={classNames(classes.main, classes.mainRaised)}>
+        
+        <div className={classNames(classes.main, classes.mainRaised)}> 
+        {/* <h2> Our Branches </h2> */}
           <div className={classes.container} >
-            <h4 className={classes.title}>Branches</h4>
-            <GridContainer>
+            <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={6}>
                 <AddressSection
                   branchName="HealthyBee, Wakad."
