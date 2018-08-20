@@ -39,7 +39,7 @@ class Components extends React.Component {
         <Header
           brand="HealthyBee"
           fixed
-          color="primary"
+          color="warning"
           {...rest}
         />
         <Parallax image={require("../../assets/img/bg4.jpeg")}>
