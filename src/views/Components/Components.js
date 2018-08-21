@@ -24,7 +24,7 @@ import Parallax from "../../components/Parallax/Parallax.js";
 import SectionTypography from "./Sections/SectionTypography.js";
 // import SectionJavascript from "./Sections/SectionJavascript.js";
 import SectionCarousel from "./Sections/SectionCarousel.js";
-import image from "../../assets/img/faces/avatar.jpg";
+// import image from "../../assets/img/faces/avatar.jpg";
 // import SectionCompletedExamples from "./Sections/SectionCompletedExamples.js";
 // import SectionLogin from "./Sections/SectionLogin.js";
 // import SectionExamples from "./Sections/SectionExamples.js";

@@ -65,7 +65,7 @@ function Footer({ ...props }) {
         <Button
           justIcon
           round
-          color="instagram"
+          color="rose"
           href="https://www.instagram.com/healthybee.fit"
           target="_blank">
           <i className={"fa fa-instagram"} />
