@@ -5,38 +5,45 @@ import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
 
 // core components
+import axios from 'axios';
 import GridContainer from "../../../components/Grid/GridContainer.js";
 import GridItem from "../../../components/Grid/GridItem.js";
 import CustomInput from "../../../components/CustomInput/CustomInput.js";
 import Button from "../../../components/CustomButtons/Button.js";
-import axios from 'axios';
 import workStyle from "../../../assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
 
 
 class WorkSection extends React.Component {
-constructor() {
-  super();
-  this.submitFeedback = this.submitFeedback.bind(this);
-}
+  constructor() {
+    super();
+    this.state = {
+      showSuccessSnackBar: false
+    };
 
-submitFeedback(event) {
-  event.preventDefault();
-  const data = {
-    name: event.currentTarget.name.value,
-    email: event.currentTarget.email.value,
-    message: event.currentTarget.message.value
+    this.submitFeedback = this.submitFeedback.bind(this);
   }
-  axios
-    .post('url', data)
-    .then(response => {
-      console.log(response);
-    })
-    .catch(error => {
-      console.log(error);
-    });
-  
-  console.log('handle submit feedback called', event);
-}
+
+  submitFeedback(event) {
+    event.preventDefault();
+    const data = {
+      name: event.target.name.value,
+      email: event.target.email.value,
+      message: event.target.message.value
+    };
+    const url = "https://us-central1-healthybee-subscription.cloudfunctions.net/api/feedback";
+    axios
+      .post(url, JSON.stringify(data))
+      .then(response => {
+        if (response) {
+          document.getElementById('feedbackForm').reset();
+          this.setState({ showSuccessSnackBar: true });
+        }
+      })
+      .catch(error => {
+        // this.clearForm(event);
+        console.log(error);
+      });
+  }
   render() {
     const { classes } = this.props;
     return (
@@ -47,7 +54,7 @@ submitFeedback(event) {
             <h4 className={classes.description}>
               If you want to know more about us or want to get in touch, please feel free to write us.
             </h4>
-            <form onSubmit={this.submitFeedback} name="feedbackForm">
+            <form onSubmit={this.submitFeedback} id="feedbackForm" name="feedbackForm">
               <GridContainer>
                 <GridItem xs={12} sm={12} md={6}>
                   <CustomInput
@@ -100,6 +107,7 @@ submitFeedback(event) {
                     <Button color="warning" type="submit">Send Message</Button>
                   </GridItem>
                 </GridContainer>
+
               </GridContainer>
             </form>
           </GridItem>

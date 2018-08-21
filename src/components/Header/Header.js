@@ -97,6 +97,11 @@ class Header extends React.Component {
               )}
           </div>
           <Hidden smDown implementation="css">
+            <Link to={'/order-now'} className={classes.link}>
+              <Button color="default" size="medium">
+                Order Now
+              </Button>
+            </Link>
             <Link to={'/menu'} className={classes.link}>
               <Button color="default" size="medium">
                 Menu
@@ -112,6 +117,7 @@ class Header extends React.Component {
                 Contact Us
               </Button>
             </Link>
+
           </Hidden>
           <Hidden mdUp>
             <IconButton
