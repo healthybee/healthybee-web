@@ -28,11 +28,12 @@ class ProfilePage extends React.Component {
                 <h2 className={classes.title}>Our Story Starts Health.</h2>
                 <h4>
                   At HealthyBee, our mission is to serve healthy food every day.
-  We provide the inspirational, hygienic food need to make healthy eating a way of life.
-  Our specially designed menu offers delicious recipes, balanced nutritional diet plans, and new ways to make healthy cuisine choices more exciting.
-  We are about moderation and balance—not strict rules or fad diets—because for healthy eating to become a way of life,
-it should be accessible, sustainable, inspiring and—above all—delicious.{" "}
+                  We provide the inspirational, hygienic food need to make healthy eating a way of life.
+                  Our specially designed menu offers delicious recipes, balanced nutritional diet plans, and new ways to make healthy cuisine choices more exciting.
+                  We are about moderation and balance—not strict rules or fad diets—because for healthy eating to become a way of life,
+                  it should be accessible, sustainable, inspiring and—above all—delicious.{" "}
                 </h4>
+                <br/><br/>
               </div>
             </div>
           </div>

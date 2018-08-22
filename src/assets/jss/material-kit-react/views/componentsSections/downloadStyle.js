@@ -2,7 +2,7 @@ import { container } from "../../../material-kit-react.js";
 
 const downloadStyle = {
   section: {
-    padding: "70px 0"
+    padding: "10px 0"
   },
   container,
   textCenter: {

@@ -11,7 +11,7 @@ import GridItem from "../../../components/Grid/GridItem.js";
 import CustomInput from "../../../components/CustomInput/CustomInput.js";
 import Button from "../../../components/CustomButtons/Button.js";
 import workStyle from "../../../assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
-
+import CustomizedSnackbars from "../../../components/Snackbar/Snackbar.js";
 
 class WorkSection extends React.Component {
   constructor() {
@@ -21,6 +21,7 @@ class WorkSection extends React.Component {
     };
 
     this.submitFeedback = this.submitFeedback.bind(this);
+    this.toggleSnackbar = this.toggleSnackbar.bind(this);
   }
 
   submitFeedback(event) {
@@ -44,6 +45,12 @@ class WorkSection extends React.Component {
         console.log(error);
       });
   }
+
+  toggleSnackbar() {
+    const { showSuccessSnackBar } = this.state;
+    this.setState({ showSuccessSnackBar: !showSuccessSnackBar });
+  }
+
   render() {
     const { classes } = this.props;
     return (
@@ -107,11 +114,14 @@ class WorkSection extends React.Component {
                     <Button color="warning" type="submit">Send Message</Button>
                   </GridItem>
                 </GridContainer>
-
               </GridContainer>
             </form>
           </GridItem>
         </GridContainer>
+        <CustomizedSnackbars
+          showSuccessSnackBar={this.state.showSuccessSnackBar}
+          toggleSnackbar={this.toggleSnackbar} 
+          />
       </div>
     );
   }

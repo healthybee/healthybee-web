@@ -4,13 +4,13 @@ import React from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
-import GridContainer from "../../../components/Grid/GridContainer.js";
-import GridItem from "../../../components/Grid/GridItem.js";
-import Button from "../../../components/CustomButtons/Button.js";
+import GridContainer from "../../components/Grid/GridContainer.js";
+import GridItem from "../../components/Grid/GridItem.js";
+import Button from "../../components/CustomButtons/Button.js";
 // core components
-import downloadStyle from "../../../assets/jss/material-kit-react/views/componentsSections/downloadStyle.js";
+import downloadStyle from "../../assets/jss/material-kit-react/views/componentsSections/downloadStyle.js";
 
-class SectionDownload extends React.Component {
+class OrderNowSection extends React.Component {
   render() {
     const { classes } = this.props;
     return (
@@ -51,4 +51,4 @@ class SectionDownload extends React.Component {
   }
 }
 
-export default withStyles(downloadStyle)(SectionDownload);
+export default withStyles(downloadStyle)(OrderNowSection);

@@ -13,6 +13,7 @@ import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
 // import Button from "../../components/CustomButtons/Button.js";
 import Parallax from "../../components/Parallax/Parallax.js";
+import Snackbar from "../../components/Snackbar/Snackbar.js";
 // import Badge from "../../components/Badge/Badge.js";
 // sections for this page
 // import HeaderLinks from "../../components/Header/HeaderLinks.js";
@@ -21,7 +22,7 @@ import Parallax from "../../components/Parallax/Parallax.js";
 // import SectionTabs from "./Sections/SectionTabs.js";
 // import SectionPills from "./Sections/SectionPills.js";
 // import SectionNotifications from "./Sections/SectionNotifications.js";
-import SectionTypography from "./Sections/SectionTypography.js";
+// import SectionTypography from "./Sections/SectionTypography.js";
 // import SectionJavascript from "./Sections/SectionJavascript.js";
 import SectionCarousel from "./Sections/SectionCarousel.js";
 // import image from "../../assets/img/faces/avatar.jpg";
@@ -68,7 +69,7 @@ class Components extends React.Component {
           {/* <SectionJavascript /> */}
           {/* <SectionDownload /> */}
           <SectionCarousel />
-          <SectionTypography />
+          {/* <SectionTypography /> */}
           {/* <SectionCompletedExamples /> */}
           {/* <SectionLogin />
           <GridItem md={12} className={classes.textCenter}>
@@ -79,6 +80,7 @@ class Components extends React.Component {
             </Link>
           </GridItem> */}
           {/* <SectionExamples /> */}
+          <Snackbar />
           <div className={classes.textCenter + " " + classes.sharingArea}>
           </div>
           

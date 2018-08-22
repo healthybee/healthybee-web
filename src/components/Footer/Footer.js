@@ -53,7 +53,7 @@ function Footer({ ...props }) {
             color="facebook"
             href="https://www.facebook.com/healthybee.fit"
             target="_blank">
-            <i className={"fa fa-facebook"} />
+            <i className="fab fa-facebook-f"></i>
           </Button>
         </Tooltip>
 
@@ -68,7 +68,7 @@ function Footer({ ...props }) {
           color="rose"
           href="https://www.instagram.com/healthybee.fit"
           target="_blank">
-          <i className={"fa fa-instagram"} />
+          <i className={"fab fa-instagram"} />
         </Button>
       </Tooltip>
 

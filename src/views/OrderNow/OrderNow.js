@@ -1,5 +1,6 @@
 import React from "react";
 // nodejs library that concatenates classes
+import classNames from "classnames";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
@@ -10,8 +11,9 @@ import Footer from "../../components/Footer/Footer.js";
 import Parallax from "../../components/Parallax/Parallax.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
-import Button from "../../components/CustomButtons/Button.js";
+// import Button from "../../components/CustomButtons/Button.js";
 import landingPageStyle from "../../assets/jss/material-kit-react/views/landingPage.js";
+import SectionDownload from "./OrderNowSection.js";
 
 class OrderNow extends React.Component {
   render() {
@@ -26,28 +28,19 @@ class OrderNow extends React.Component {
 
         <Parallax small filter image={require("../../assets/img/food/beach-hat-cactus-plant-delicious.jpeg")}>
           <div className={classes.container}>
-            <GridContainer justify="center">
-              <GridItem>
-                <Button
-                  color="warning"
-                  href="https://www.swiggy.com/pune/healthybee-baner-baner"
-                  target="_blank"
-                  round
-                  size="lg">
-                  Order Online
-                  </Button>
-                <Button
-                  color="warning"
-                  href="https://www.swiggy.com/pune/healthybee-baner-baner"
-                  target="_blank"
-                  round
-                  size="lg">
-                  Order Online
-                  </Button>
+            <GridContainer>
+              <GridItem xs={12} sm={12} md={6}>
+                <h1 className={classes.title}>Hurry up, get 10% Off</h1>
+                <h3>
+                Come Hungry. Leave Healthy.
+                </h3>
               </GridItem>
             </GridContainer>
           </div>
         </Parallax>
+        <div className={classNames(classes.main, classes.mainRaised)}>
+        <SectionDownload />
+        </div>
         <Footer />
       </div>
     );
