@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
+// import Card from '@material-ui/core/Card';
 // import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
+// import CardContent from '@material-ui/core/CardContent';
 // import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
@@ -26,33 +26,28 @@ const styles = {
 };
 
 function SimpleCard(props) {
-  const { branchName,branchAddress, branchEmail, branchContactNumber, classes } = props;
-//   const bull = <span className={classes.bullet}>•</span>;
+  const { branchName, branchAddress, branchEmail, branchContactNumber } = props;
+  //   const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <div>
-      <Card className={classes.card}>
-        <CardContent>
-          <Typography variant="headline" component="h3">
-            {branchName}
-          </Typography>
-          <Typography component="p">
-            {branchAddress}<br />
-            <br/>
-          </Typography>
-          <Typography component="p">
-            <b>Email: </b>{branchEmail} <br />
-            <b>Phone: </b> {branchContactNumber}
-          </Typography>
-
-        </CardContent>
-      </Card>
+      <Typography variant="headline" component="h3">
+        {branchName}
+      </Typography>
+      <Typography component="p">
+        {branchAddress}<br />
+        <br />
+      </Typography>
+      <Typography component="p">
+        <b><i class="fas fa-envelope-open"></i> </b>{branchEmail} <br />
+        <b><i class="fas fa-phone"></i> </b> {branchContactNumber}
+      </Typography>
     </div>
   );
 }
 
 SimpleCard.propTypes = {
-    branchName: PropTypes.string,
+  branchName: PropTypes.string,
   classes: PropTypes.object.isRequired,
 };
 
