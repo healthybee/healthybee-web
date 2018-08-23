@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-// import Card from '@material-ui/core/Card';
-// import CardActions from '@material-ui/core/CardActions';
-// import CardContent from '@material-ui/core/CardContent';
-// import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import Card from "../../../components/Card/Card.js";
+import CardBody from "../../../components/Card/CardBody.js";
+import CardHeader from "../../../components/Card/CardHeader.js";
 
 const styles = {
   card: {
@@ -26,22 +24,23 @@ const styles = {
 };
 
 function SimpleCard(props) {
-  const { branchName, branchAddress, branchEmail, branchContactNumber } = props;
+  const { branchName, headerColor, branchAddress, branchEmail, branchContactNumber, classes } = props;
   //   const bull = <span className={classes.bullet}>•</span>;
 
   return (
-    <div>
-      <Typography variant="headline" component="h3">
-        {branchName}
-      </Typography>
-      <Typography component="p">
-        {branchAddress}<br />
-        <br />
-      </Typography>
-      <Typography component="p">
-        <b><i class="fas fa-envelope-open"></i> </b>{branchEmail} <br />
-        <b><i class="fas fa-phone"></i> </b> {branchContactNumber}
-      </Typography>
+    <div className={classes.section}>
+      <Card>
+        <CardHeader color={headerColor}>
+          <h3>{branchName}</h3>
+        </CardHeader>
+        <CardBody>
+          <h4>{branchAddress}</h4>
+          <h5>
+            <b><i className="fas fa-envelope-open"></i> </b> <strong>{branchEmail} </strong><br />
+            <b><i className="fas fa-phone"></i> </b> <strong> {branchContactNumber}</strong>
+          </h5>
+        </CardBody>
+      </Card>
     </div>
   );
 }

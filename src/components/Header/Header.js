@@ -11,6 +11,8 @@ import IconButton from "@material-ui/core/IconButton";
 import Button from "@material-ui/core/Button";
 import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
 import logo1 from '../../images/logo1.png'
@@ -137,27 +139,45 @@ class Header extends React.Component {
             classes={{
               paper: classes.drawerPaper
             }}
-            onClose={this.handleDrawerToggle}
-          >
+            onClose={this.handleDrawerToggle}>
+            
             <div className={classes.appResponsive}>
               {leftLinks}
-              <Link to={'/'} className={classes.link}>
-                <Button color="default" size="medium">
-                  Home
-                </Button>
-              </Link>
-              <br />
-              <Link to={'/about-us'} className={classes.link}>
-                <Button color="default" size="medium">
-                  About Us
-                </Button>
-              </Link>
-              <br />
-              <Link to={'/contact-us'} className={classes.link}>
-                <Button color="default" size="medium">
-                  Contact Us
-                </Button>
-              </Link>
+              <List className={classes.list}>
+                <ListItem className={classes.listItem}>
+                  <Link to={'/'} className={classes.link}>
+                    <Button color="default" size="large">
+                      Home
+                    </Button>
+                  </Link>
+                </ListItem>
+                <ListItem className={classes.listItem}>
+                  <Link to={'/order-now'} className={classes.link}>
+                    <Button color="default" size="large">
+                      Order Now
+                    </Button>
+                  </Link>
+                </ListItem>
+                {/* <Link to={'/menu'} className={classes.link}>
+              <Button color="default" size="medium">
+                Menu
+              </Button>
+            </Link> */}
+                <ListItem className={classes.listItem}>
+                  <Link to={'/about-us'} className={classes.link}>
+                    <Button color="default" size="large">
+                      About Us
+                    </Button>
+                  </Link>
+                </ListItem>
+                <ListItem className={classes.listItem}>
+                  <Link to={'/contact-us'} className={classes.link}>
+                    <Button color="default" size="large">
+                      Contact Us
+                    </Button>
+                  </Link>
+                </ListItem>
+              </List>
             </div>
           </Drawer>
         </Hidden>

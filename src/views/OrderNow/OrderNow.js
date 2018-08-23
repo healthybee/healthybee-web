@@ -30,7 +30,7 @@ class OrderNow extends React.Component {
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
-                <h1 className={classes.title}>Hurry up, get 10% Off</h1>
+                <h1 className={classes.title}>Hurry up, 10% off on Online orders</h1>
                 <h3>
                 Come Hungry. Leave Healthy.
                 </h3>

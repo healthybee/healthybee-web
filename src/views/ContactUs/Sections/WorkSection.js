@@ -104,7 +104,7 @@ class WorkSection extends React.Component {
                     required: true
                   }}
                 />
-                <GridContainer justify="center">
+                <GridContainer>
                   <GridItem
                     xs={12}
                     sm={12}

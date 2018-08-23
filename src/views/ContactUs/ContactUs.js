@@ -51,24 +51,31 @@ class LandingPage extends React.Component {
           </div>
         </Parallax>
         
-        <div className={classNames(classes.main, classes.mainRaised)}> 
-        {/* <h2> Our Branches </h2> */}
+        <div className={classNames(classes.main, classes.mainRaised)}>
+        <GridContainer justify="center">
+          <GridItem cs={12} sm={3} md={5}>
+            <h2>Find us at your nearest place</h2>
+            <br/>
+            </GridItem>
+        </GridContainer> 
+        
           <div className={classes.container} >
-          <br/><br/>
-            <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={6}>
+            <GridContainer>
+              <GridItem xs={12} sm={8} md={6}>
                 <AddressSection
                   branchName="HealthyBee, Wakad."
                   branchAddress="Inside Silver Sports Club, Behind Vedanta Society, Shankar Kalat Nagar, Wakad, Pune - 411057"
                   branchEmail="healthybee.fit.wakad@gmail.com"
-                  branchContactNumber="+91-92847 40370" />
+                  branchContactNumber="+91-92847 40370" 
+                  headerColor="warning"/>
               </GridItem>
               <GridItem xs={12} sm={12} md={6}>
                 <AddressSection
                   branchName="HealthyBee, Baner."
                   branchAddress="Shop no. 6,  Alacrity commercial complex, Behind Bitwise Terra Tower, By pass road, Pune - 411045"
                   branchEmail="healthybee.fit@gmail.com"
-                  branchContactNumber="+91-99756 90709" />
+                  branchContactNumber="+91-99756 90709" 
+                  headerColor="primary"/>
               </GridItem>
             </GridContainer>
             <WorkSection />

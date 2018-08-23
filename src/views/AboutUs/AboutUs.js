@@ -25,7 +25,7 @@ class ProfilePage extends React.Component {
           <div>
             <div className={classes.container}>
               <div className={classes.description}>
-                <h2 className={classes.title}>Our Story Starts Health.</h2>
+                <h2 className={classes.title}>Our Story Starts Healthy Food.</h2>
                 <h4>
                   At HealthyBee, our mission is to serve healthy food every day.
                   We provide the inspirational, hygienic food need to make healthy eating a way of life.

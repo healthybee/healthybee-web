@@ -11,7 +11,7 @@ import Tab from "@material-ui/core/Tab";
 // core components
 import Card from "../Card/Card.js";
 import CardBody from "../Card/CardBody.js";
-import CardHeader from "..//Card/CardHeader.js";
+import CardHeader from "../Card/CardHeader.js";
 
 import customTabsStyle from "../../assets/jss/material-kit-react/components/customTabsStyle.js";
 
