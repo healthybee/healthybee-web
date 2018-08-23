@@ -36,7 +36,7 @@ class SectionCarousel extends React.Component {
             <GridItem xs={12} sm={12} md={8}>
               <Card carousel>
                 <Carousel {...settings}>
-                  <div>
+                  <div >
                     <img
                       src={image4}
                       alt="Third slide"

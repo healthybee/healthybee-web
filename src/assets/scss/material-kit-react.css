@@ -848,7 +848,7 @@ button.slick-arrow.slick-next {
 .slick-prev {
   left: 0; }
   .slick-prev::before {
-    content: "\003c";
+    content: "\f053";
     font-weight: 600;
     font-family: Font Awesome\ 5 Free;
     -moz-osx-font-smoothing: grayscale;
@@ -865,9 +865,9 @@ button.slick-arrow.slick-next {
 .slick-next {
   right: 0; }
   .slick-next::before {
-    content: "\003e";
+    content: "\f054";
     font-weight: 600;
-    font-family: Font Awesome ;
+    font-family: Font Awesome\ 5 Free;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
