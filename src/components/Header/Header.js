@@ -81,7 +81,7 @@ class Header extends React.Component {
       <Link to={'/'}>
         {/* <Button className={classes.title}>{brand}</Button> */}
         <img src={logo2} height="55px" alt="logo1" />
-        <img src={logo1} height="40px" alt="logo2" />
+        <img src={logo1} height="35px" alt="logo2" />
         {/* <sup><i className="fa fa-copyright"/></sup> */}
       </Link>
     );
