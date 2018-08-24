@@ -1,30 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Card from "../../../components/Card/Card.js";
-import CardBody from "../../../components/Card/CardBody.js";
-import CardHeader from "../../../components/Card/CardHeader.js";
+import Card from '../../../components/Card/Card.js';
+import CardBody from '../../../components/Card/CardBody.js';
+import CardHeader from '../../../components/Card/CardHeader.js';
 
 const styles = {
   card: {
-    minWidth: 275,
+    minWidth: 275
   },
   bullet: {
     display: 'inline-block',
     margin: '0 2px',
-    transform: 'scale(0.8)',
+    transform: 'scale(0.8)'
   },
   title: {
     marginBottom: 16,
-    fontSize: 14,
+    fontSize: 14
   },
   pos: {
-    marginBottom: 12,
-  },
+    marginBottom: 12
+  }
 };
 
 function SimpleCard(props) {
-  const { branchName, headerColor, branchAddress, branchEmail, branchContactNumber, classes } = props;
+  const {
+    branchName,
+    headerColor,
+    branchAddress,
+    branchEmail,
+    branchContactNumber,
+    classes
+  } = props;
   //   const bull = <span className={classes.bullet}>•</span>;
 
   return (
@@ -36,8 +43,8 @@ function SimpleCard(props) {
         <CardBody>
           <h4>{branchAddress}</h4>
           <h5>
-            <b><i className="fas fa-envelope-open"></i> </b> <strong>{branchEmail} </strong><br />
-            <b><i className="fas fa-phone"></i> </b> <strong> {branchContactNumber}</strong>
+            <i className="fas fa-envelope-open fa-xs" /> {branchEmail} <br />
+            <i className="fas fa-phone fa-xs" /> {branchContactNumber}
           </h5>
         </CardBody>
       </Card>
@@ -47,7 +54,7 @@ function SimpleCard(props) {
 
 SimpleCard.propTypes = {
   branchName: PropTypes.string,
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(SimpleCard);

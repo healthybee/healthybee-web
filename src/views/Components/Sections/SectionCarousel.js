@@ -1,21 +1,20 @@
-import React from "react";
+import React from 'react';
 // react component for creating beautiful carousel
-import Carousel from "react-slick";
+import Carousel from 'react-slick';
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from '@material-ui/core/styles/withStyles';
 // @material-ui/icons
 // import LocationOn from "@material-ui/icons/LocationOn";
 // core components
-import GridContainer from "../../../components/Grid/GridContainer.js";
-import GridItem from "../../../components/Grid/GridItem.js";
-import Card from "../../../components/Card/Card.js";
-import carouselStyle from "../../../assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
-import image4 from "../../../assets/img/food/avocado-cooked.jpeg";
-import image5 from "../../../assets/img/food/buffet-chicken-cooking.jpg";
-import image6 from "../../../assets/img/food/bowl-delicious-diet.jpeg";
-import image7 from "../../../assets/img/food/banana-bread-bread-breakfast.jpeg";
-import image8 from "../../../assets/img/food/bread-breakfast-close-up.jpeg";
-
+import GridContainer from '../../../components/Grid/GridContainer.js';
+import GridItem from '../../../components/Grid/GridItem.js';
+import Card from '../../../components/Card/Card.js';
+import carouselStyle from '../../../assets/jss/material-kit-react/views/componentsSections/carouselStyle.js';
+import image4 from '../../../assets/img/food/avocado-cooked.jpeg';
+import image5 from '../../../assets/img/food/buffet-chicken-cooking.jpg';
+import image6 from '../../../assets/img/food/bowl-delicious-diet.jpeg';
+import image7 from '../../../assets/img/food/banana-bread-bread-breakfast.jpeg';
+import image8 from '../../../assets/img/food/bread-breakfast-close-up.jpeg';
 
 class SectionCarousel extends React.Component {
   render() {
@@ -32,11 +31,13 @@ class SectionCarousel extends React.Component {
       <div className={classes.section}>
         <div className={classes.container}>
           <GridContainer justify="center">
-            <h2>Our Popular Healthy Cuisine</h2>
+            <div className={classes.title}>
+              <h2>Our Popular Healthy Cuisine</h2>
+            </div>
             <GridItem xs={12} sm={12} md={8}>
               <Card carousel>
                 <Carousel {...settings}>
-                  <div >
+                  <div>
                     <img
                       src={image4}
                       alt="Third slide"
