@@ -23,7 +23,6 @@ class OrderNow extends React.Component {
         <Header color="primary" brand="HealthyBee" fixed {...rest} />
 
         <Parallax
-          small
           filter
           image={require('../../assets/img/food/beach-hat-cactus-plant-delicious.jpeg')}
         >
