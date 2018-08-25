@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from '@material-ui/core/styles/withStyles';
 
 // @material-ui/icons
 
 // core components
 import axios from 'axios';
-import GridContainer from "../../../components/Grid/GridContainer.js";
-import GridItem from "../../../components/Grid/GridItem.js";
-import CustomInput from "../../../components/CustomInput/CustomInput.js";
-import Button from "../../../components/CustomButtons/Button.js";
-import workStyle from "../../../assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
-import CustomizedSnackbars from "../../../components/Snackbar/Snackbar.js";
+import GridContainer from '../../../components/Grid/GridContainer.js';
+import GridItem from '../../../components/Grid/GridItem.js';
+import CustomInput from '../../../components/CustomInput/CustomInput.js';
+import Button from '../../../components/CustomButtons/Button.js';
+import workStyle from '../../../assets/jss/material-kit-react/views/landingPageSections/workStyle.js';
+import CustomizedSnackbars from '../../../components/Snackbar/Snackbar.js';
 
 class WorkSection extends React.Component {
   constructor() {
@@ -31,7 +31,8 @@ class WorkSection extends React.Component {
       email: event.target.email.value,
       message: event.target.message.value
     };
-    const url = "https://us-central1-healthybee-subscription.cloudfunctions.net/api/feedback";
+    const url =
+      'https://us-central1-healthybee-subscription.cloudfunctions.net/api/feedback';
     axios
       .post(url, JSON.stringify(data))
       .then(response => {
@@ -59,9 +60,14 @@ class WorkSection extends React.Component {
           <GridItem cs={12} sm={12} md={8}>
             <h2 className={classes.title}>Get in touch</h2>
             <h4 className={classes.description}>
-              If you want to know more about us or want to get in touch, please feel free to write us.
+              If you want to know more about us or want to get in touch, please
+              feel free to write us.
             </h4>
-            <form onSubmit={this.submitFeedback} id="feedbackForm" name="feedbackForm">
+            <form
+              onSubmit={this.submitFeedback}
+              id="feedbackForm"
+              name="feedbackForm"
+            >
               <GridContainer>
                 <GridItem xs={12} sm={12} md={6}>
                   <CustomInput
@@ -86,7 +92,7 @@ class WorkSection extends React.Component {
                     }}
                     inputProps={{
                       required: true,
-                      type: "email"
+                      type: 'email'
                     }}
                   />
                 </GridItem>
@@ -111,7 +117,9 @@ class WorkSection extends React.Component {
                     md={4}
                     className={classes.textCenter}
                   >
-                    <Button color="warning" type="submit">Send Message</Button>
+                    <Button color="warning" type="submit">
+                      Send Message
+                    </Button>
                   </GridItem>
                 </GridContainer>
               </GridContainer>
@@ -120,8 +128,8 @@ class WorkSection extends React.Component {
         </GridContainer>
         <CustomizedSnackbars
           showSuccessSnackBar={this.state.showSuccessSnackBar}
-          toggleSnackbar={this.toggleSnackbar} 
-          />
+          toggleSnackbar={this.toggleSnackbar}
+        />
       </div>
     );
   }

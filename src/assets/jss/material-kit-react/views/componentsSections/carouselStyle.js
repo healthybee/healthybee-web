@@ -1,13 +1,18 @@
-import { container } from "../../../material-kit-react.js";
+import { container, title } from '../../../material-kit-react.js';
 
 const carouselStyle = {
   section: {
-    padding: "20px 0"
+    padding: '0 0'
+  },
+  title: {
+    ...title,
+    marginLeft: '20px',
+    textDecoration: 'none'
   },
   container,
   marginAuto: {
-    marginLeft: "auto !important",
-    marginRight: "auto !important"
+    marginLeft: 'auto !important',
+    marginRight: 'auto !important'
   }
 };
 
