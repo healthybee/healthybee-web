@@ -34,7 +34,7 @@ class WorkSection extends React.Component {
     const url =
       'https://us-central1-healthybee-subscription.cloudfunctions.net/api/feedback';
     axios
-      .post(url, JSON.stringify(data))
+      .post(url, data)
       .then(response => {
         if (response) {
           document.getElementById('feedbackForm').reset();
