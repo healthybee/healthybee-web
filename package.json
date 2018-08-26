@@ -23,7 +23,8 @@
     "react-scripts": "1.1.4",
     "react-slick": "^0.23.1",
     "react-swipeable-views": "^0.12.16",
-    "styled-components": "^2.4.1"
+    "styled-components": "^2.4.1",
+    "url-parse": "^1.4.3"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
