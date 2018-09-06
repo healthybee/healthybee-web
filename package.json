@@ -23,6 +23,7 @@
     "react-scripts": "1.1.4",
     "react-slick": "^0.23.1",
     "react-swipeable-views": "^0.12.16",
+    "rimraf": "^2.6.2",
     "styled-components": "^2.4.1",
     "url-parse": "^1.4.3"
   },
@@ -34,7 +35,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && rimraf build/static/**/*.map",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "precommit": "lint-staged"
