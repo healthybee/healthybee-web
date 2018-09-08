@@ -10,12 +10,14 @@ import IconButton from '@material-ui/core/IconButton';
 // @material-ui/icons
 import Close from '@material-ui/icons/Close';
 // core components
+import axios from 'axios';
 import GridContainer from '../../../components/Grid/GridContainer.js';
 import GridItem from '../../../components/Grid/GridItem.js';
 import CustomInput from '../../../components/CustomInput/CustomInput.js';
 import Button from '../../../components/CustomButtons/Button.js';
-
 import modalStyle from '../../../assets/jss/material-kit-react/modalStyle.js';
+import CustomizedSnackbars from '../../../components/Snackbar/Snackbar.js';
+import { BASE_API } from '../../../Config/constants';
 
 function Transition(props) {
   return <Slide direction="down" {...props} />;
@@ -27,17 +29,47 @@ class Modal extends React.Component {
     this.state = {
       modal: false
     };
+    this.sendOfferEmail = this.sendOfferEmail.bind(this);
+    this.toggleSnackbar = this.toggleSnackbar.bind(this);
   }
+
   handleClickOpen(modal) {
     var x = [];
     x[modal] = true;
     this.setState(x);
   }
+
   handleClose(modal) {
     var x = [];
     x[modal] = false;
     this.setState(x);
   }
+
+  sendOfferEmail(event) {
+    event.preventDefault();
+    const data = {
+      email: event.target.subscriberEmail.value
+    };
+    const url = `${BASE_API}/offers/subscriber`;
+    axios
+      .post(url, data)
+      .then(response => {
+        if (response) {
+          document.getElementById('mainOfferForm').reset();
+          this.handleClose('modal');
+          this.setState({ showSuccessSnackBar: true });
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+
+  toggleSnackbar() {
+    const { showSuccessSnackBar } = this.state;
+    this.setState({ showSuccessSnackBar: !showSuccessSnackBar });
+  }
+
   render() {
     const { classes } = this.props;
     return (
@@ -82,14 +114,20 @@ class Modal extends React.Component {
             className={classes.modalBody}
           >
             <h5>We will send your promo code on your email </h5>
-            <form>
+            <form
+              onSubmit={this.sendOfferEmail}
+              id="mainOfferForm"
+              name="mainOfferForm"
+            >
               <GridContainer>
                 <GridItem xs={12} sm={12} md={12}>
                   <CustomInput
                     labelText="Your Email"
-                    id="regular"
+                    id="subscriberEmail"
+                    name="subscriberEmail"
                     formControlProps={{
-                      fullWidth: true
+                      fullWidth: true,
+                      required: true
                     }}
                   />
                 </GridItem>
@@ -100,13 +138,20 @@ class Modal extends React.Component {
                     md={6}
                     className={classes.textCenter}
                   >
-                    <Button color="warning">Send Message</Button>
+                    <Button color="warning" type="submit">
+                      Send Message
+                    </Button>
                   </GridItem>
                 </GridContainer>
               </GridContainer>
             </form>
           </DialogContent>
         </Dialog>
+        <CustomizedSnackbars
+          successMessage="Thank You, Offer code sent on your email id."
+          showSuccessSnackBar={this.state.showSuccessSnackBar}
+          toggleSnackbar={this.toggleSnackbar}
+        />
       </div>
     );
   }
