@@ -21,7 +21,7 @@ class SectionMainOffer extends React.Component {
           <GridContainer className={classes.textCenter} justify="center">
             <GridItem xs={12} sm={12} md={8}>
               <h2>
-                Get Discount <b> 10% </b> on <i className="fas fa-utensils" />{' '}
+                Get <b> 10% </b> Discount on <i className="fas fa-utensils" />{' '}
                 Dine In.
               </h2>
               <h4>
