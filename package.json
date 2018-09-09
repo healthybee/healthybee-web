@@ -20,9 +20,10 @@
     "react-popper": "^1.0.2",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4",
+    "react-scripts": "1.1.5",
     "react-slick": "^0.23.1",
     "react-swipeable-views": "^0.12.16",
+    "rimraf": "^2.6.2",
     "styled-components": "^2.4.1",
     "url-parse": "^1.4.3"
   },
@@ -34,7 +35,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && rimraf build/static/**/*.map",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "precommit": "lint-staged"
