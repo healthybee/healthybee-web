@@ -14,101 +14,103 @@ import { withStyles } from '@material-ui/core/styles';
 import { styles1 } from './SanackbarStyles.js';
 
 const variantIcon = {
-    success: CheckCircleIcon,
-    warning: WarningIcon,
-    error: ErrorIcon,
-    info: InfoIcon,
+  success: CheckCircleIcon,
+  warning: WarningIcon,
+  error: ErrorIcon,
+  info: InfoIcon
 };
 
 function MySnackbarContent(props) {
-    const { classes, className, message, onClose, variant, ...other } = props;
-    const Icon = variantIcon[variant];
+  const { classes, className, message, onClose, variant, ...other } = props;
+  const Icon = variantIcon[variant];
 
-    return (
-        <SnackbarContent
-            className={classNames(classes[variant], className)}
-            aria-describedby="client-snackbar"
-            message={
-                <span id="client-snackbar" className={classes.message}>
-                    <Icon className={classNames(classes.icon, classes.iconVariant)} />
-                    {message}
-                </span>
-            }
-            action={[
-                <IconButton
-                    key="close"
-                    aria-label="Close"
-                    color="inherit"
-                    className={classes.close}
-                    onClick={onClose}
-                >
-                    <CloseIcon className={classes.icon} />
-                </IconButton>,
-            ]}
-            {...other}
-        />
-    );
+  return (
+    <SnackbarContent
+      className={classNames(classes[variant], className)}
+      aria-describedby="client-snackbar"
+      message={
+        <span id="client-snackbar" className={classes.message}>
+          <Icon className={classNames(classes.icon, classes.iconVariant)} />
+          {message}
+        </span>
+      }
+      action={[
+        <IconButton
+          key="close"
+          aria-label="Close"
+          color="inherit"
+          className={classes.close}
+          onClick={onClose}
+        >
+          <CloseIcon className={classes.icon} />
+        </IconButton>
+      ]}
+      {...other}
+    />
+  );
 }
 
 MySnackbarContent.propTypes = {
-    classes: PropTypes.object.isRequired,
-    className: PropTypes.string,
-    message: PropTypes.node,
-    onClose: PropTypes.func,
-    variant: PropTypes.oneOf(['success', 'warning', 'error', 'info']).isRequired,
+  classes: PropTypes.object.isRequired,
+  className: PropTypes.string,
+  message: PropTypes.node,
+  onClose: PropTypes.func,
+  variant: PropTypes.oneOf(['success', 'warning', 'error', 'info']).isRequired
 };
 
 const MySnackbarContentWrapper = withStyles(styles1)(MySnackbarContent);
 
 const styles2 = theme => ({
-    margin: {
-        margin: theme.spacing.unit,
-    },
+  margin: {
+    margin: theme.spacing.unit
+  }
 });
 
 class CustomizedSnackbars extends React.Component {
-    state = {
-        open: false,
-    };
+  state = {
+    open: false
+  };
 
-    handleClick = () => {
-        this.setState({ open: true });
-    };
+  handleClick = () => {
+    this.setState({ open: true });
+  };
 
-    handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-            return;
-        }
-
-        this.props.toggleSnackbar();
-    };
-
-    render() {
-        const { showSuccessSnackBar } = this.props;
-        return (
-            <div>
-                {<Snackbar
-                    anchorOrigin={{
-                        vertical: 'bottom',
-                        horizontal: 'center',
-                    }}
-                    open={showSuccessSnackBar}
-                    autoHideDuration={6000}
-                    onClose={this.handleClose}>
-                    <MySnackbarContentWrapper
-                        onClose={this.handleClose}
-                        variant="success"
-                        message="Thank you for your sending us your valuable feedback !"
-                    />
-                </Snackbar>
-                }
-            </div>
-        );
+  handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
     }
+
+    this.props.toggleSnackbar();
+  };
+
+  render() {
+    const { successMessage, showSuccessSnackBar } = this.props;
+    return (
+      <div>
+        {
+          <Snackbar
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'center'
+            }}
+            open={showSuccessSnackBar}
+            autoHideDuration={6000}
+            onClose={this.handleClose}
+          >
+            <MySnackbarContentWrapper
+              onClose={this.handleClose}
+              variant="success"
+              message={successMessage}
+            />
+          </Snackbar>
+        }
+      </div>
+    );
+  }
 }
 
 CustomizedSnackbars.propTypes = {
-    classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles2)(CustomizedSnackbars);

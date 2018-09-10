@@ -12,6 +12,7 @@ import CustomInput from '../../../components/CustomInput/CustomInput.js';
 import Button from '../../../components/CustomButtons/Button.js';
 import workStyle from '../../../assets/jss/material-kit-react/views/landingPageSections/workStyle.js';
 import CustomizedSnackbars from '../../../components/Snackbar/Snackbar.js';
+import { BASE_API } from '../../../Config/constants';
 
 class WorkSection extends React.Component {
   constructor() {
@@ -31,8 +32,7 @@ class WorkSection extends React.Component {
       email: event.target.email.value,
       message: event.target.message.value
     };
-    const url =
-      'https://us-central1-healthybee-subscription.cloudfunctions.net/api/feedback';
+    const url = `${BASE_API}/feedback`;
     axios
       .post(url, data)
       .then(response => {
@@ -42,7 +42,6 @@ class WorkSection extends React.Component {
         }
       })
       .catch(error => {
-        // this.clearForm(event);
         console.log(error);
       });
   }
@@ -127,6 +126,7 @@ class WorkSection extends React.Component {
           </GridItem>
         </GridContainer>
         <CustomizedSnackbars
+          successMessage="Thank you for your sending us your valuable feedback !"
           showSuccessSnackBar={this.state.showSuccessSnackBar}
           toggleSnackbar={this.toggleSnackbar}
         />
