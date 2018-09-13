@@ -1,5 +1,5 @@
 import Loadable from 'react-loadable';
-import Loading from './loading';
+import Loading from '../components/Loading/loading';
 
 const Components = Loadable({
     loader: () => import('../views/Components/Components.js'),
