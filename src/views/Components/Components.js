@@ -31,6 +31,8 @@ import Parallax from '../../components/Parallax/Parallax.js';
 // import SectionLogin from "./Sections/SectionLogin.js";
 // import SectionExamples from "./Sections/SectionExamples.js";
 // import SectionDownload from "./Sections/SectionDownload.js";
+import componentsStyle from '../../assets/jss/material-kit-react/views/components.js';
+
 const Header = Loadable({
   loader: () => import('../../components/Header/Header.js'),
   loading: Loading
@@ -43,12 +45,6 @@ const Footer = Loadable({
 
 const Snackbar = Loadable({
   loader: () => import('../../components/Snackbar/Snackbar.js'),
-  loading: Loading
-});
-
-const componentsStyle = Loadable({
-  loader: () =>
-    import('../../assets/jss/material-kit-react/views/components.js'),
   loading: Loading
 });
 
