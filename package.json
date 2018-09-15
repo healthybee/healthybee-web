@@ -16,6 +16,7 @@
     "react": "^16.4.2",
     "react-datetime": "^2.15.0",
     "react-dom": "^16.4.2",
+    "react-loadable": "^5.5.0",
     "react-nouislider": "^2.0.1",
     "react-popper": "^1.0.2",
     "react-router": "^4.3.1",
@@ -38,9 +39,11 @@
     "build": "react-scripts build && rimraf build/static/**/*.map",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "postbuild": "react-snap"
   },
   "devDependencies": {
-    "@babel/runtime": "^7.0.0-rc.3"
+    "@babel/runtime": "^7.0.0-rc.3",
+    "react-snap": "^1.19.0"
   }
 }
