@@ -30,6 +30,11 @@ function Footer({ ...props }) {
         <div className={classes.left}>
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
+              <Link to={'/order-now'} className={classes.block}>
+                Order Now
+              </Link>
+            </ListItem>
+            <ListItem className={classes.inlineBlock}>
               <Link to={'/about-us'} className={classes.block}>
                 About us
               </Link>
@@ -41,58 +46,66 @@ function Footer({ ...props }) {
             </ListItem>
           </List>
         </div>
-
-        <Tooltip
-          id="facebook-facebook"
-          title="Like us on facebook"
-          placement={window.innerWidth > 959 ? 'top' : 'left'}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            justIcon
-            round
-            color="facebook"
-            href="https://www.facebook.com/healthybee.fit"
-            target="_blank"
-          >
-            <i className="fab fa-facebook-f" />
-          </Button>
-        </Tooltip>
-
-        <Tooltip
-          id="instagram-instagram"
-          title="Follow us on instagram"
-          placement={window.innerWidth > 959 ? 'top' : 'left'}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            justIcon
-            round
-            color="rose"
-            href="https://www.instagram.com/healthybee.fit"
-            target="_blank"
-          >
-            <i className={'fab fa-instagram'} />
-          </Button>
-        </Tooltip>
-
-        <Tooltip
-          id="zomato"
-          title="Review us on zomato"
-          placement={window.innerWidth > 959 ? 'top' : 'left'}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            justIcon
-            round
-            color="google"
-            href="https://www.zomato.com/pune/healthybee-baner"
-            target="_blank"
-          >
-            <b>Z</b>
-          </Button>
-        </Tooltip>
-
+        <div className={classes.container}>
+          <div className={classes.left}>
+            <List className={classes.list}>
+              <ListItem className={classes.inlineBlock}>
+                <Tooltip
+                  id="facebook-facebook"
+                  title="Like us on facebook"
+                  placement={window.innerWidth > 959 ? 'top' : 'left'}
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button
+                    justIcon
+                    round
+                    color="facebook"
+                    href="https://www.facebook.com/healthybee.fit"
+                    target="_blank"
+                  >
+                    <i className="fab fa-facebook-f" />
+                  </Button>
+                </Tooltip>
+              </ListItem>
+              <ListItem className={classes.inlineBlock}>
+                <Tooltip
+                  id="instagram-instagram"
+                  title="Follow us on instagram"
+                  placement={window.innerWidth > 959 ? 'top' : 'left'}
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button
+                    justIcon
+                    round
+                    color="rose"
+                    href="https://www.instagram.com/healthybee.fit"
+                    target="_blank"
+                  >
+                    <i className={'fab fa-instagram'} />
+                  </Button>
+                </Tooltip>
+              </ListItem>
+              <ListItem className={classes.inlineBlock}>
+                <Tooltip
+                  id="zomato"
+                  title="Review us on zomato"
+                  placement={window.innerWidth > 959 ? 'top' : 'left'}
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button
+                    justIcon
+                    round
+                    color="google"
+                    href="https://www.zomato.com/pune/healthybee-baner"
+                    target="_blank"
+                  >
+                    <b>Z</b>
+                  </Button>
+                </Tooltip>
+              </ListItem>
+            </List>
+          </div>
+        </div>
         <div className={classes.right}>
           &copy; {1900 + new Date().getYear()} , by HealthyBee.fit{' '}
         </div>
