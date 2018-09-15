@@ -39,7 +39,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "precommit": "lint-staged",
-    "postbuild": "react-snap"
+    "postbuild": "react-snap --no-sandbox"
   },
   "devDependencies": {
     "@babel/runtime": "^7.0.0",
