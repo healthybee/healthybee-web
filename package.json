@@ -35,11 +35,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && rimraf build/static/**/*.map",
+    "build": "react-scripts build && react-snapshot",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "precommit": "lint-staged",
-    "postbuild": "react-snapshot"
+    "precommit": "lint-staged"
   },
   "devDependencies": {
     "@babel/runtime": "^7.0.0",
