@@ -1,5 +1,10 @@
 # HealthyBee (21-09-2017)
 
+## Build Status
+ - Develop [![Build Status](https://travis-ci.org/healthybee/healthybee-web.svg?branch=develop)](https://travis-ci.org/healthybee/healthybee-web)
+ - Stage [![Build Status](https://travis-ci.org/healthybee/healthybee-web.svg?branch=stage)](https://travis-ci.org/healthybee/healthybee-web)
+ - Master [![Build Status](https://travis-ci.org/healthybee/healthybee-web.svg?branch=master)](https://travis-ci.org/healthybee/healthybee-web)
+
 Below you will find some information on how to perform common tasks.<br>
 
 ## Table of Contents
