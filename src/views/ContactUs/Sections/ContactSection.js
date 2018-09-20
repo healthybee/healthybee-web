@@ -29,6 +29,7 @@ class ContactSection extends React.Component {
               <AddressSection
                 branchName="HealthyBee, Wakad."
                 branchAddress="Inside Silver Sports Club, Behind Vedanta Society, Shankar Kalat Nagar, Wakad, Pune - 411057"
+                branchTime="9AM-10PM"
                 branchEmail="healthybee.fit.wakad@gmail.com"
                 branchContactNumber="+91-92847 40370"
                 headerColor="warning"
@@ -38,9 +39,10 @@ class ContactSection extends React.Component {
               <AddressSection
                 branchName="HealthyBee, Baner."
                 branchAddress="Shop no. 6,  Alacrity commercial complex, Behind Bitwise Terra Tower, By pass road, Pune - 411045"
+                branchTime="8AM-10:45PM"
                 branchEmail="healthybee.fit@gmail.com"
                 branchContactNumber="+91-99756 90709"
-                headerColor="primary"
+                headerColor="warning"
               />
             </GridItem>
           </GridContainer>
