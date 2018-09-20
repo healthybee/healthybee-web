@@ -30,6 +30,7 @@ function SimpleCard(props) {
     branchAddress,
     branchEmail,
     branchContactNumber,
+    branchTime,
     classes
   } = props;
   //   const bull = <span className={classes.bullet}>•</span>;
@@ -42,10 +43,11 @@ function SimpleCard(props) {
         </CardHeader>
         <CardBody>
           <h4>{branchAddress}</h4>
-          <h5>
+          <p>
+            <i className="fas fa-clock fa-xs" /> {branchTime} <br />
             <i className="fas fa-envelope-open fa-xs" /> {branchEmail} <br />
             <i className="fas fa-phone fa-xs" /> {branchContactNumber}
-          </h5>
+          </p>
         </CardBody>
       </Card>
     </div>
