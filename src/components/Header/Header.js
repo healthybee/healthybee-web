@@ -104,6 +104,11 @@ class Header extends React.Component {
                 Order Now
               </Button>
             </Link>
+            <Link to={'/subscription'} className={classes.link}>
+              <Button color="default" size="medium">
+                Subscription
+              </Button>
+            </Link>
             {/* <Link to={'/menu'} className={classes.link}>
               <Button color="default" size="medium">
                 Menu

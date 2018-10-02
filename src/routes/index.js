@@ -20,6 +20,10 @@ const Components = Loadable({
   OrderNow = Loadable({
     loader: () => import('../views/OrderNow/OrderNow'),
     loading: Loading
+  }),
+  Subscription = Loadable({
+    loader: () => import('../views/Subscription/Subscription'),
+    loading: Loading
   });
 
 let indexRoutes = [
@@ -27,6 +31,7 @@ let indexRoutes = [
   { path: '/contact-us', name: 'ContactUs', component: ContactUs },
   { path: '/menu', name: 'MenuPage', component: MenuPage },
   { path: '/order-now', name: 'OrderNow', component: OrderNow },
+  { path: '/subscription', name: 'Subscription', component: Subscription },
   { path: '/', name: 'Components', component: Components }
 ];
 
