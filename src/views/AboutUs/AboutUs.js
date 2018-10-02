@@ -19,7 +19,7 @@ class ProfilePage extends React.Component {
         <Parallax
           small
           filter
-          image={require('../../assets/img/about-us.jpeg')}
+          image={require('../../assets/img/food/Egg_Brown_Rice.jpg')}
         />
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div>

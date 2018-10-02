@@ -39,7 +39,7 @@ class ContactUsPage extends React.Component {
         <Parallax
           small
           filter
-          image={require('../../assets/img/food/beverages-brunch-cocktail.jpg')}
+          image={require('../../assets/img/food/Fruit_Custard.jpg')}
         >
           <div className={classes.container}>
             <GridContainer>
