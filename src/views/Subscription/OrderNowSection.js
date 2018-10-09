@@ -1,74 +1,77 @@
+// import React from 'react';
+// import PropTypes from 'prop-types';
+// import { withStyles } from '@material-ui/core/styles';
+// import Stepper from '@material-ui/core/Stepper';
+// import Step from '@material-ui/core/Step';
+// import StepLabel from '@material-ui/core/StepLabel';
+// // @material-ui/icons
+// // import GridContainer from '../../components/Grid/GridContainer.js';
+// // import GridItem from '../../components/Grid/GridItem.js';
+// // import StepContent from '@material-ui/core/StepContent';
+// //
+// import Paper from '@material-ui/core/Paper';
+// import Typography from '@material-ui/core/Typography';
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
-// @material-ui/icons
-import GridContainer from '../../components/Grid/GridContainer.js';
-import GridItem from '../../components/Grid/GridItem.js';
-import StepContent from '@material-ui/core/StepContent';
 import Button from '../../components/CustomButtons/Button.js';
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
   root: {
     width: '90%'
   },
-  button: {
-    marginTop: theme.spacing.unit,
+  backButton: {
     marginRight: theme.spacing.unit
   },
-  actionsContainer: {
-    marginBottom: theme.spacing.unit * 1
-  },
-  resetContainer: {
-    padding: theme.spacing.unit * 3
+  instructions: {
+    marginTop: theme.spacing.unit,
+    marginBottom: theme.spacing.unit
   }
 });
 
 function getSteps() {
-  return ['Select your meal plan', 'Fill basic details', 'Make Payment'];
+  return [
+    'Select master blaster campaign settings',
+    'Create an ad group',
+    'Create an ad'
+  ];
 }
 
-function getStepContent(step) {
-  switch (step) {
+function getStepContent(stepIndex) {
+  switch (stepIndex) {
     case 0:
-      return `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-              when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. `;
+      return 'Select campaign settings...';
     case 1:
-      return `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. `;
+      return 'What is an ad group anyways?';
     case 2:
-      return `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. `;
+      return 'This is the bit I really care about!';
     default:
-      return 'Unknown step';
+      return 'Uknown stepIndex';
   }
 }
 
-class VerticalLinearStepper extends React.Component {
+class HorizontalLabelPositionBelowStepper extends React.Component {
   state = {
     activeStep: 0
   };
 
   handleNext = () => {
-    this.setState(state => ({
-      activeStep: state.activeStep + 1
-    }));
+    const { activeStep } = this.state;
+    this.setState({
+      activeStep: activeStep + 1
+    });
   };
 
   handleBack = () => {
-    this.setState(state => ({
-      activeStep: state.activeStep - 1
-    }));
+    const { activeStep } = this.state;
+    this.setState({
+      activeStep: activeStep - 1
+    });
   };
 
   handleReset = () => {
@@ -83,62 +86,55 @@ class VerticalLinearStepper extends React.Component {
     const { activeStep } = this.state;
 
     return (
-      <div className={classes.section}>
-        <div className={classes.container}>
-          <GridContainer className={classes.textCenter} justify="center">
-            <GridItem xs={12} sm={12} md={8}>
-              <Stepper activeStep={activeStep} orientation="vertical">
-                {steps.map((label, index) => {
-                  return (
-                    <Step key={label}>
-                      <h3>{label}</h3>
-                      <StepContent>
-                        <Typography>{getStepContent(index)}</Typography>
-                        <div className={classes.actionsContainer}>
-                          <div>
-                            <Button
-                              color="warning"
-                              disabled={activeStep === 0}
-                              onClick={this.handleBack}
-                              className={classes.button}
-                            >
-                              Back
-                            </Button>
-                            <Button
-                              variant="contained"
-                              color="primary"
-                              onClick={this.handleNext}
-                              className={classes.button}
-                            >
-                              {activeStep === steps.length - 1
-                                ? 'Finish'
-                                : 'Next'}
-                            </Button>
-                          </div>
-                        </div>
-                      </StepContent>
-                    </Step>
-                  );
-                })}
-              </Stepper>
-              {activeStep === steps.length && (
-                <Paper square elevation={0} className={classes.resetContainer}>
-                  <Typography>All steps completed - Thank you!</Typography>
-                  <Button onClick={this.handleReset} className={classes.button}>
-                    See Again
-                  </Button>
-                </Paper>
-              )}
-            </GridItem>
-          </GridContainer>
+      <div className={classes.root}>
+        <Stepper activeStep={activeStep} alternativeLabel>
+          {steps.map(label => {
+            return (
+              <Step key={label}>
+                <StepLabel>{label}</StepLabel>
+              </Step>
+            );
+          })}
+        </Stepper>
+        <div>
+          {this.state.activeStep === steps.length ? (
+            <div>
+              <Typography className={classes.instructions}>
+                All steps completed
+              </Typography>
+              <Button onClick={this.handleReset}>Reset</Button>
+            </div>
+          ) : (
+            <div>
+              <Typography className={classes.instructions}>
+                {getStepContent(activeStep)}
+              </Typography>
+              <div>
+                <Button
+                  disabled={activeStep === 0}
+                  onClick={this.handleBack}
+                  className={classes.backButton}
+                >
+                  Back
+                </Button>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={this.handleNext}
+                >
+                  {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     );
   }
 }
 
-VerticalLinearStepper.propTypes = {
+HorizontalLabelPositionBelowStepper.propTypes = {
   classes: PropTypes.object
 };
 
-export default withStyles(styles)(VerticalLinearStepper);
+export default withStyles(styles)(HorizontalLabelPositionBelowStepper);
