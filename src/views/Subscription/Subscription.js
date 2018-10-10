@@ -30,12 +30,18 @@ class OrderNow extends React.Component {
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
-                <h1 className={classes.title}>Content goes here</h1>
+                <h1 className={classes.title}>
+                  Work hard in silence, let your success be your noise.
+                </h1>
               </GridItem>
             </GridContainer>
           </div>
         </Parallax>
         <div className={classNames(classes.main, classes.mainRaised)}>
+          <h4>
+            Help us by providing your preferences so that we can prepare better
+            options.
+          </h4>
           <SectionDownload />
         </div>
         <Footer />

@@ -18,60 +18,118 @@ import { withStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
+import StepConnector from '@material-ui/core/StepConnector';
 import Button from '../../components/CustomButtons/Button.js';
 import Typography from '@material-ui/core/Typography';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import GridItem from '../../components/Grid/GridItem.js';
+import CustomInput from '../../components/CustomInput/CustomInput.js';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 
 const styles = theme => ({
-  root: {
-    width: '90%'
-  },
-  backButton: {
+  root: {},
+  button: {
     marginRight: theme.spacing.unit
   },
   instructions: {
     marginTop: theme.spacing.unit,
     marginBottom: theme.spacing.unit
+  },
+  connectorActive: {
+    '& $line': {
+      borderColor: theme.palette.secondary.main
+    }
+  },
+  connectorCompleted: {
+    '& $line': {
+      borderColor: theme.palette.primary.main
+    }
+  },
+  line: {
+    color: 'green'
   }
 });
-
+const setp0 = (
+  <GridContainer justify="center">
+    <GridItem cs={12} sm={12} md={8}>
+      <form
+        onSubmit={this.submitFeedback}
+        id="feedbackForm"
+        name="feedbackForm"
+      >
+        <GridContainer>
+          <GridItem xs={12} sm={12} md={6}>
+            <FormControl>
+              <InputLabel htmlFor="age-simple">Age</InputLabel>
+              <Select
+                inputProps={{
+                  name: 'age',
+                  id: 'age-simple'
+                }}
+              >
+                <MenuItem value="">
+                  <em>None</em>
+                </MenuItem>
+                <MenuItem value={10}>Ten</MenuItem>
+                <MenuItem value={20}>Twenty</MenuItem>
+                <MenuItem value={30}>Thirty</MenuItem>
+              </Select>
+            </FormControl>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={6}>
+            <CustomInput
+              labelText="Your Email"
+              id="email"
+              name="email"
+              formControlProps={{
+                fullWidth: true
+              }}
+              inputProps={{
+                required: true,
+                type: 'email'
+              }}
+            />
+          </GridItem>
+        </GridContainer>
+      </form>
+    </GridItem>
+  </GridContainer>
+);
 function getSteps() {
-  return [
-    'Select master blaster campaign settings',
-    'Create an ad group',
-    'Create an ad'
-  ];
+  return ['Select your preferences', 'Personal details', 'Delivery address'];
 }
 
-function getStepContent(stepIndex) {
-  switch (stepIndex) {
+function getStepContent(step) {
+  switch (step) {
     case 0:
-      return 'Select campaign settings...';
+      return setp0;
     case 1:
       return 'What is an ad group anyways?';
     case 2:
       return 'This is the bit I really care about!';
     default:
-      return 'Uknown stepIndex';
+      return 'Unknown step';
   }
 }
 
-class HorizontalLabelPositionBelowStepper extends React.Component {
+class CustomizedStepper extends React.Component {
   state = {
     activeStep: 0
   };
 
   handleNext = () => {
-    const { activeStep } = this.state;
-    this.setState({
-      activeStep: activeStep + 1
-    });
+    this.setState(state => ({
+      activeStep: state.activeStep + 1
+    }));
   };
 
   handleBack = () => {
-    const { activeStep } = this.state;
-    this.setState({
-      activeStep: activeStep - 1
-    });
+    this.setState(state => ({
+      activeStep: state.activeStep - 1
+    }));
   };
 
   handleReset = () => {
@@ -82,27 +140,40 @@ class HorizontalLabelPositionBelowStepper extends React.Component {
 
   render() {
     const { classes } = this.props;
-    const steps = getSteps();
     const { activeStep } = this.state;
+    const steps = getSteps();
 
     return (
       <div className={classes.root}>
-        <Stepper activeStep={activeStep} alternativeLabel>
-          {steps.map(label => {
-            return (
-              <Step key={label}>
-                <StepLabel>{label}</StepLabel>
-              </Step>
-            );
-          })}
+        <Stepper
+          activeStep={activeStep}
+          connector={
+            <StepConnector
+              classes={{
+                active: classes.connectorActive,
+                completed: classes.connectorCompleted,
+                line: classes.line
+              }}
+            />
+          }
+        >
+          {steps.map(label => (
+            <Step key={label}>
+              <StepLabel>
+                <h5>{label}</h5>
+              </StepLabel>
+            </Step>
+          ))}
         </Stepper>
         <div>
-          {this.state.activeStep === steps.length ? (
+          {activeStep === steps.length ? (
             <div>
               <Typography className={classes.instructions}>
-                All steps completed
+                All steps completed - you&quot;re finished
               </Typography>
-              <Button onClick={this.handleReset}>Reset</Button>
+              <Button onClick={this.handleReset} className={classes.button}>
+                Reset
+              </Button>
             </div>
           ) : (
             <div>
@@ -113,7 +184,7 @@ class HorizontalLabelPositionBelowStepper extends React.Component {
                 <Button
                   disabled={activeStep === 0}
                   onClick={this.handleBack}
-                  className={classes.backButton}
+                  className={classes.button}
                 >
                   Back
                 </Button>
@@ -121,6 +192,7 @@ class HorizontalLabelPositionBelowStepper extends React.Component {
                   variant="contained"
                   color="primary"
                   onClick={this.handleNext}
+                  className={classes.button}
                 >
                   {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
                 </Button>
@@ -133,8 +205,8 @@ class HorizontalLabelPositionBelowStepper extends React.Component {
   }
 }
 
-HorizontalLabelPositionBelowStepper.propTypes = {
+CustomizedStepper.propTypes = {
   classes: PropTypes.object
 };
 
-export default withStyles(styles)(HorizontalLabelPositionBelowStepper);
+export default withStyles(styles)(CustomizedStepper);
