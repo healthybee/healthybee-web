@@ -23,7 +23,6 @@ class OrderNow extends React.Component {
         <Header color="primary" brand="HealthyBee" fixed {...rest} />
 
         <Parallax
-          small
           filter
           image={require('../../assets/img/food/beach-hat-cactus-plant-delicious.jpeg')}
         >
@@ -38,10 +37,12 @@ class OrderNow extends React.Component {
           </div>
         </Parallax>
         <div className={classNames(classes.main, classes.mainRaised)}>
-          <h4>
-            Help us by providing your preferences so that we can prepare better
-            options.
-          </h4>
+          <div className={classes.container}>
+            <h3>
+              Help us by providing your preferences so that we can prepare
+              better options.
+            </h3>
+          </div>
           <SectionDownload />
         </div>
         <Footer />

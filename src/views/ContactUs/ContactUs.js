@@ -37,14 +37,13 @@ class ContactUsPage extends React.Component {
           {...rest}
         />
         <Parallax
-          small
           filter
           image={require('../../assets/img/food/Fruit_Custard.jpg')}
         >
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
-                <h2 className={classes.title}>Want to meet us.</h2>
+                <h1 className={classes.title}>Want to meet us.</h1>
                 <h4>
                   If you have anything to discuss or just have to hang out with
                   us, please write us an email given below or give a call or

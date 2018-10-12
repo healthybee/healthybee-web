@@ -17,7 +17,6 @@ class ProfilePage extends React.Component {
         <Header color="primary" brand="HealthyBee" fixed {...rest} />
 
         <Parallax
-          small
           filter
           image={require('../../assets/img/food/Egg_Brown_Rice.jpg')}
         />

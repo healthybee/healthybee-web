@@ -28,6 +28,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import BasicDetails from './BasicDetails';
 
 const styles = theme => ({
   root: {},
@@ -52,52 +53,8 @@ const styles = theme => ({
     color: 'green'
   }
 });
-const setp0 = (
-  <GridContainer justify="center">
-    <GridItem cs={12} sm={12} md={8}>
-      <form
-        onSubmit={this.submitFeedback}
-        id="feedbackForm"
-        name="feedbackForm"
-      >
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={6}>
-            <FormControl>
-              <InputLabel htmlFor="age-simple">Age</InputLabel>
-              <Select
-                inputProps={{
-                  name: 'age',
-                  id: 'age-simple'
-                }}
-              >
-                <MenuItem value="">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
-              </Select>
-            </FormControl>
-          </GridItem>
-          <GridItem xs={12} sm={12} md={6}>
-            <CustomInput
-              labelText="Your Email"
-              id="email"
-              name="email"
-              formControlProps={{
-                fullWidth: true
-              }}
-              inputProps={{
-                required: true,
-                type: 'email'
-              }}
-            />
-          </GridItem>
-        </GridContainer>
-      </form>
-    </GridItem>
-  </GridContainer>
-);
+const setp0 = <BasicDetails />;
+
 function getSteps() {
   return ['Select your preferences', 'Personal details', 'Delivery address'];
 }
