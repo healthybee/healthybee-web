@@ -38,10 +38,13 @@ class OrderNow extends React.Component {
         </Parallax>
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div className={classes.container}>
-            <h3>
-              Help us by providing your preferences so that we can prepare
-              better options.
-            </h3>
+            <div className={classes.typo}>
+              <div className={classes.note}>Header 1</div>
+              <h3 style={{ color: '#424242' }}>
+                Help us by providing your preferences so that we can prepare
+                better meal options.
+              </h3>
+            </div>
           </div>
           <SectionDownload />
         </div>
