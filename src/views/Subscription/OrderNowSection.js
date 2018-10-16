@@ -21,13 +21,13 @@ import StepLabel from '@material-ui/core/StepLabel';
 import StepConnector from '@material-ui/core/StepConnector';
 import Button from '../../components/CustomButtons/Button.js';
 import Typography from '@material-ui/core/Typography';
-import GridContainer from '../../components/Grid/GridContainer.js';
-import GridItem from '../../components/Grid/GridItem.js';
-import CustomInput from '../../components/CustomInput/CustomInput.js';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
+// import GridContainer from '../../components/Grid/GridContainer.js';
+// import GridItem from '../../components/Grid/GridItem.js';
+// import CustomInput from '../../components/CustomInput/CustomInput.js';
+// import InputLabel from '@material-ui/core/InputLabel';
+// import MenuItem from '@material-ui/core/MenuItem';
+// import FormControl from '@material-ui/core/FormControl';
+// import Select from '@material-ui/core/Select';
 import BasicDetails from './BasicDetails';
 
 const styles = theme => ({
@@ -107,8 +107,8 @@ class CustomizedStepper extends React.Component {
           connector={
             <StepConnector
               classes={{
-                active: classes.connectorActive,
-                completed: classes.connectorCompleted,
+                // active: classes.connectorActive,
+                // completed: classes.connectorCompleted,
                 line: classes.line
               }}
             />
@@ -134,9 +134,7 @@ class CustomizedStepper extends React.Component {
             </div>
           ) : (
             <div>
-              <Typography className={classes.instructions}>
-                {getStepContent(activeStep)}
-              </Typography>
+              {getStepContent(activeStep)}
               <div>
                 <Button
                   disabled={activeStep === 0}

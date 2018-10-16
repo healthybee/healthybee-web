@@ -1,23 +1,27 @@
 import React from 'react';
 // react plugin that creates slider
-import Nouislider from 'react-nouislider';
+// import Nouislider from "react-nouislider";
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Radio from '@material-ui/core/Radio';
-import Switch from '@material-ui/core/Switch';
+// import Switch from "@material-ui/core/Switch";
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 // @material-ui/icons
 import Check from '@material-ui/icons/Check';
 import FiberManualRecord from '@material-ui/icons/FiberManualRecord';
 // core components
 import GridContainer from '../../components/Grid/GridContainer.js';
 import GridItem from '../../components/Grid/GridItem.js';
-import Button from '../../components/CustomButtons/Button.js';
-import CustomInput from '../../components/CustomInput/CustomInput.js';
-import CustomLinearProgress from '../../components/CustomLinearProgress/CustomLinearProgress.js';
-import Paginations from '../../components/Pagination/Pagination.js';
-import Badge from '../../components/Badge/Badge.js';
+// import Button from "../../components/CustomButtons/Button.js";
+// import CustomInput from "../../components/CustomInput/CustomInput.js";
+// import CustomLinearProgress from "../../components/CustomLinearProgress/CustomLinearProgress.js";
+// import Paginations from "../../components/Pagination/Pagination.js";
+// import Badge from "../../components/Badge/Badge.js";
 
 import basicsStyle from '../../assets/jss/material-kit-react/views/componentsSections/basicsStyle.js';
 
@@ -201,48 +205,24 @@ class SectionBasics extends React.Component {
                 <h4>Toggle Buttons</h4>
               </div>
               <div>
-                <FormControlLabel
-                  control={
-                    <Switch
-                      checked={this.state.checkedA}
-                      onChange={this.handleChange('checkedA')}
-                      value="checkedA"
-                      classes={{
-                        switchBase: classes.switchBase,
-                        checked: classes.switchChecked,
-                        icon: classes.switchIcon,
-                        iconChecked: classes.switchIconChecked,
-                        bar: classes.switchBar
-                      }}
-                    />
-                  }
-                  classes={{
-                    label: classes.label
-                  }}
-                  label="Toggle is on"
-                />
-              </div>
-              <div>
-                <FormControlLabel
-                  control={
-                    <Switch
-                      checked={this.state.checkedB}
-                      onChange={this.handleChange('checkedB')}
-                      value="checkedB"
-                      classes={{
-                        switchBase: classes.switchBase,
-                        checked: classes.switchChecked,
-                        icon: classes.switchIcon,
-                        iconChecked: classes.switchIconChecked,
-                        bar: classes.switchBar
-                      }}
-                    />
-                  }
-                  classes={{
-                    label: classes.label
-                  }}
-                  label="Toggle is off"
-                />
+                <FormControl className={classes.formControl}>
+                  <InputLabel htmlFor="age-simple">Age</InputLabel>
+                  <Select
+                    value={'stateValue'}
+                    onChange={this.handleChange}
+                    inputProps={{
+                      name: 'age',
+                      id: 'age-simple'
+                    }}
+                  >
+                    <MenuItem value="">
+                      <em>None</em>
+                    </MenuItem>
+                    <MenuItem value={10}>Ten</MenuItem>
+                    <MenuItem value={20}>Twenty</MenuItem>
+                    <MenuItem value={30}>Thirty</MenuItem>
+                  </Select>
+                </FormControl>
               </div>
             </GridItem>
           </GridContainer>
