@@ -26,7 +26,7 @@ class SectionMainOffer extends React.Component {
                 In.
               </h2>
               <h4>
-                Use promo code <strong>Today</strong> at our outlets to get
+                Use promo code <strong>Today</strong> at our Baner outlet to get
                 offer.
               </h4>
             </GridItem>
