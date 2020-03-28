@@ -22,11 +22,6 @@ function Copyright() {
 
 export default function App() {
   return (
-    <Container maxWidth="xl">
       <Main />
-        {/* <SignIn /> */}
-        {/* <ProTip />   */}
-        {/* <Copyright /> */}
-    </Container>
   );
 }
