@@ -14,6 +14,7 @@ import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
 import IconButton from "@material-ui/core/IconButton";
 import LeftNavDrawer from './LeftNavDrawer';
+import SignInDrawer from './SignInDrawer';
 
 function Copyright() {
   return (
@@ -91,7 +92,8 @@ export default function Main() {
           <Typography variant="h6" className={classes.title}>
             HealthyBee
           </Typography>
-          <Button color="inherit">Login</Button>
+          <SignInDrawer />
+          <Button color="inherit"></Button>
         </Toolbar>
       </AppBar>
       <main>
