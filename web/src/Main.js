@@ -1,7 +1,6 @@
 import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
-import CameraIcon from "@material-ui/icons/PhotoCamera";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
@@ -14,8 +13,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import Drawer from './LeftNavDrawer';
+import LeftNavDrawer from './LeftNavDrawer';
 
 function Copyright() {
   return (
@@ -88,7 +86,7 @@ export default function Main() {
             color="inherit"
             aria-label="menu"
           >
-            <Drawer />
+            <LeftNavDrawer />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
             HealthyBee
