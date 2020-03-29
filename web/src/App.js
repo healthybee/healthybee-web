@@ -6,6 +6,7 @@ import Link from '@material-ui/core/Link';
 import ProTip from './ProTip';
 import SignIn from './SignIn';
 import Main from './Main';
+import './style/style.scss';
 
 function Copyright() {
   return (
