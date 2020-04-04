@@ -12,7 +12,7 @@ export default function App() {
   return (
     <Switch>
       <Route exact path="/" component={LandingPage} />
-      <Route exact path="/restaurants" component={Restaurants} />
+      <Route exact path="/menu" component={Restaurants} />
       <Route exact path="/about" component={About} />
       <Route component={PageNotFound} />
     </Switch>
