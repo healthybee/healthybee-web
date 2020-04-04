@@ -1,20 +1,19 @@
-import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
+import Container from "@material-ui/core/Container";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
+import IconButton from "@material-ui/core/IconButton";
+import LeftNavDrawer from "../LeftNavDrawer";
+import Link from "@material-ui/core/Link";
+import React from "react";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
-import Link from "@material-ui/core/Link";
-import IconButton from "@material-ui/core/IconButton";
-import LeftNavDrawer from '../LeftNavDrawer';
-import SignInDrawer from '../signin/SignInDrawer';
 
 function Copyright() {
   return (
@@ -28,7 +27,6 @@ function Copyright() {
     </Typography>
   );
 }
-
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -92,7 +90,6 @@ export default function Main() {
           <Typography variant="h6" className={classes.title}>
             HealthyBee
           </Typography>
-          <SignInDrawer />
           <Button color="inherit"></Button>
         </Toolbar>
       </AppBar>
@@ -170,20 +167,6 @@ export default function Main() {
         </Container>
       </main>
       {/* Footer */}
-      <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="textSecondary"
-          component="p"
-        >
-          Something here to give the footer a purpose!
-        </Typography>
-        <Copyright />
-      </footer>
       {/* End footer */}
     </React.Fragment>
   );
