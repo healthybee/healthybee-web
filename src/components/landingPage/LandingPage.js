@@ -1,14 +1,13 @@
+import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Footer from '../footer/Footer';
 import Grid from '@material-ui/core/Grid';
+import { NavLink } from 'react-router-dom';
 import Paper from '@material-ui/core/Paper';
 import React from 'react';
-import Button from '@material-ui/core/Button';
 import SignInDrawer from '../signin/SignInDrawer';
-import TopBar from './TopBar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { NavLink, Redirect } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -46,7 +45,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignInSide() {
   const classes = useStyles();
-  const containerElement = <NavLink to="/home" />;
 
   return (
     <>
@@ -72,9 +70,13 @@ export default function SignInSide() {
             <br />
             <br />
             <br />
-            
-            <NavLink to="/menu" ><Button variant="contained" color="primary">See menu</Button></NavLink>
-            
+
+            <NavLink to="/menu">
+              <Button variant="contained" color="primary">
+                See menu
+              </Button>
+            </NavLink>
+
             <br />
             <br />
           </div>
