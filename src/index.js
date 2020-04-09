@@ -1,41 +1,25 @@
-import React from 'react';
-import { hydrate, render } from 'react-dom';
-import { createBrowserHistory } from 'history';
-import { Router, Route, Switch } from 'react-router';
-import registerServiceWorker from './registerServiceWorker';
-import indexRoutes from './routes';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import configureStore from "./redux/configureStore";
+import { Provider as ReduxProvider } from "react-redux";
+import { BrowserRouter as Router } from "react-router-dom";
 
-import './assets/scss/material-kit-react.css?v=1.1.0';
+const store = configureStore();
 
-var hist = createBrowserHistory();
-const rootElement = document.getElementById('root');
+ReactDOM.render(
+  <ReduxProvider store={store}>
+    <Router>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </Router>
+  </ReduxProvider>,
+  document.getElementById("root")
+);
 
-if (rootElement.hasChildNodes()) {
-  hydrate(
-    <Router history={hist}>
-      <Switch>
-        {indexRoutes.map((prop, key) => {
-          return (
-            <Route path={prop.path} key={key} component={prop.component} />
-          );
-        })}
-      </Switch>
-    </Router>,
-    rootElement
-  );
-} else {
-  render(
-    <Router history={hist}>
-      <Switch>
-        {indexRoutes.map((prop, key) => {
-          return (
-            <Route path={prop.path} key={key} component={prop.component} />
-          );
-        })}
-      </Switch>
-    </Router>,
-    rootElement
-  );
-}
-
-registerServiceWorker();
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();

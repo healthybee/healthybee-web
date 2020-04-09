@@ -1,59 +1,57 @@
 {
-  "name": "healthybee-web",
-  "homepage": "http://www.healthybee.fit",
-  "version": "1.0.0",
+  "name": "web",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^1.5.1",
-    "@material-ui/icons": "^1.1.1",
-    "ajv": "^6.5.3",
-    "axios": "^0.18.0",
-    "history": "^4.7.2",
-    "husky": "^0.14.3",
-    "lint-staged": "^7.2.2",
-    "prettier": "^1.14.2",
-    "react": "^16.4.2",
-    "react-datetime": "^2.15.0",
-    "react-dom": "^16.4.2",
-    "react-loadable": "^5.5.0",
-    "react-nouislider": "^2.0.1",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.3",
-    "react-slick": "^0.23.1",
-    "react-swipeable-views": "^0.12.16",
-    "styled-components": "^2.4.1"
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
+    "@material-ui/core": "^4.9.7",
+    "@material-ui/icons": "^4.9.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "clsx": "^1.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "prestart:api": "node tools/createMockDb.js",
+    "start:api": "node tools/apiServer.js",
+    "start:dev": "react-scripts start",
+    "start": "run-p start:api start:dev",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "precommit": "lint-staged",
-    "postbuild": "react-snap"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "plugins": ["prettier"],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "@babel/runtime": "^7.0.0",
-    "react-snap": "^1.19.0"
-  },
-  "reactSnap": {
-    "puppeteerArgs": [
-      "--no-sandbox",
-      "--disable-setuid-sandbox"
-    ],
-    "concurrency": 1,
-    "inlineCss": false
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "eslint-plugin-prettier": "3.1.2",
+    "json-server": "^0.16.1",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "2.0.2",
+    "redux-immutable-state-invariant": "^2.1.0"
+  }
 }
