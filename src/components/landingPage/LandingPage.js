@@ -1,5 +1,6 @@
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import FeatureSection from './FeatureSection';
 import Footer from '../footer/Footer';
 import Grid from '@material-ui/core/Grid';
 import { NavLink } from 'react-router-dom';
@@ -83,6 +84,7 @@ export default function SignInSide() {
         </Grid>
         <Grid item xs={false} sm={4} md={5} className={classes.image} />
       </Grid>
+      <FeatureSection />
       <Footer />
     </>
   );

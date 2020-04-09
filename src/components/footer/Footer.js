@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '100vh',
+    minHeight: '50vh',
   },
   main: {
     marginTop: theme.spacing(8),
@@ -46,9 +46,6 @@ export default function StickyFooter() {
       <CssBaseline />
       <footer className={classes.footer}>
         <Container maxWidth="sm">
-          <Typography variant="body1">
-            My sticky footer can be found here.
-          </Typography>
           <Copyright />
         </Container>
       </footer>

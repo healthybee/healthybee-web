@@ -1,60 +1,60 @@
-import AppBar from "@material-ui/core/AppBar";
-import Button from "@material-ui/core/Button";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Container from "@material-ui/core/Container";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Grid from "@material-ui/core/Grid";
-import IconButton from "@material-ui/core/IconButton";
-import LeftNavDrawer from "../LeftNavDrawer";
-import React from "react";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
+import AppBar from '@material-ui/core/AppBar';
+import Button from '@material-ui/core/Button';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Container from '@material-ui/core/Container';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Grid from '@material-ui/core/Grid';
+import IconButton from '@material-ui/core/IconButton';
+import LeftNavDrawer from '../LeftNavDrawer';
+import React from 'react';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 import VerticalTabs from './VerticalMenu';
+import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   icon: {
-    marginRight: theme.spacing(2)
+    marginRight: theme.spacing(2),
   },
   heroContent: {
     backgroundColor: '#171A29',
     padding: theme.spacing(8, 0, 6),
-    color: 'white'
+    color: 'white',
   },
   heroButtons: {
-    marginTop: theme.spacing(4)
+    marginTop: theme.spacing(4),
   },
   cardGrid: {
     paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8)
+    paddingBottom: theme.spacing(8),
   },
   card: {
-    height: "100%",
-    display: "flex",
-    flexDirection: "column"
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
   },
   cardMedia: {
-    paddingTop: "56.25%" // 16:9
+    paddingTop: '56.25%', // 16:9
   },
   cardContent: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   footer: {
     backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6)
+    padding: theme.spacing(6),
   },
   root: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   menuButton: {
-    marginRight: theme.spacing(2)
+    marginRight: theme.spacing(2),
   },
   title: {
-    flexGrow: 1
-  }
+    flexGrow: 1,
+  },
 }));
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -65,7 +65,7 @@ export default function Main() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>
           <IconButton
             edge="start"
@@ -85,18 +85,10 @@ export default function Main() {
         {/* Hero unit */}
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
-            <Typography
-              component="h1"
-              variant="h3"
-              align="center"
-            >
+            <Typography component="h1" variant="h3" align="center">
               Always Eat Healthy & Fresh
             </Typography>
-            <Typography
-              variant="h5"
-              align="center"
-              paragraph
-            >
+            <Typography variant="h5" align="center" paragraph>
               Something short and leading about the collection below—its
               contents, the creator, etc.
             </Typography>
@@ -120,7 +112,7 @@ export default function Main() {
           {/* End hero unit */}
           <VerticalTabs />
           <Grid container spacing={4}>
-            {cards.map(card => (
+            {cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
                   <CardMedia
