@@ -3,6 +3,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import FeatureSection from './FeatureSection';
 import Footer from '../footer/Footer';
 import Grid from '@material-ui/core/Grid';
+import HomebgImg from '../../images/homebg.jpg';
 import { NavLink } from 'react-router-dom';
 import Paper from '@material-ui/core/Paper';
 import React from 'react';
@@ -13,7 +14,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   root: {},
   image: {
-    backgroundImage: "url('/homebg.jpg')",
+    backgroundImage: `url(${HomebgImg})`,
     backgroundRepeat: 'no-repeat',
     backgroundColor:
       theme.palette.type === 'light'
