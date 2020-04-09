@@ -1,12 +1,12 @@
-import "./style/style.scss";
+import './style/style.scss';
 
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch } from 'react-router-dom';
 
-import About from "./components/about/About";
-import LandingPage from "./components/landingPage/LandingPage";
-import PageNotFound from "./components/PageNotFound";
-import React from "react";
-import Restaurants from "./components/restaurants/Restaurants";
+import About from './components/about/About';
+import LandingPage from './components/landingPage/LandingPage';
+import PageNotFound from './components/PageNotFound';
+import React from 'react';
+import Restaurants from './components/restaurants/Restaurants';
 
 export default function App() {
   return (
