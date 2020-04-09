@@ -20,7 +20,7 @@
     "reselect": "4.0.0"
   },
   "scripts": {
-    "prestart:api": "node tools/createMockDb.js",
+    "pre:api": "node tools/createMockDb.js",
     "start:api": "node tools/apiServer.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
