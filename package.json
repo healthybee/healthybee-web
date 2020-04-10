@@ -3,6 +3,10 @@
   "homepage": "http://www.healthybee.fit",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6"
+  },
   "dependencies": {
     "@material-ui/core": "4.9.7",
     "@material-ui/icons": "4.9.1",
