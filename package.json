@@ -3,6 +3,10 @@
   "homepage": "http://www.healthybee.fit",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6"
+  },
   "dependencies": {
     "@material-ui/core": "1.5.1",
     "@material-ui/icons": "1.1.1",
@@ -38,20 +42,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "precommit": "lint-staged",
-    "postbuild": "react-snap"
+    "precommit": "lint-staged"
   },
   "devDependencies": {
-    "@babel/runtime": "7.0.0",
-    "react-snap": "1.19.0"
-  },
-  "reactSnap": {
-    "puppeteerArgs": [
-      "--no-sandbox",
-      "--disable-setuid-sandbox"
-    ],
-    "concurrency": 1,
-    "inlineCss": false
+    "@babel/runtime": "7.0.0"  
   },
   "browserslist": [
     ">0.2%",
