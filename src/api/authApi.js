@@ -12,3 +12,10 @@ export async function authenticateUser(user) {
     .then(handleResponse)
     .catch(handleError);
 }
+
+export async function registerUser(user) {
+  return axios
+    .post(`${BASE_URL}${API_URL.USERS}?access_token=${API_ACCESS_TOKEN}`, user)
+    .then(handleResponse)
+    .catch(handleError);
+}

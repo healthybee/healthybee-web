@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -11,7 +11,12 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { NavLink } from 'react-router-dom';
+import { registerUser } from '../../api/authApi';
+import { loaduser } from '../../redux/actions/userActions';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -33,8 +38,33 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignUp() {
+function SignUp({ loaduser, history, ...props }) {
   const classes = useStyles();
+  const [loading, setLoading] = useState(false);
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    const user = {};
+
+    user.email = event.target.email.value || '';
+    user.password = event.target.password.value || '';
+    user.mobile = event.target.mobile.value || '';
+
+    setLoading(true);
+
+    registerUser(user)
+      .then((response) => {
+        loaduser({ ...response });
+        console.log(response, 'registered');
+        history.push('/dashboard');
+        setLoading(false);
+      })
+      .catch((err) => {
+        setLoading(false);
+        alert('wrong username or password');
+        console.log(err);
+      });
+  }
 
   return (
     <Container component="main" maxWidth="xs">
@@ -46,31 +76,8 @@ export default function SignUp() {
         <Typography component="h1" variant="h5">
           Sign up
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} onSubmit={handleSubmit} noValidate>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                autoComplete="fname"
-                name="firstName"
-                variant="outlined"
-                required
-                fullWidth
-                id="firstName"
-                label="First Name"
-                autoFocus
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="lastName"
-                label="Last Name"
-                name="lastName"
-                autoComplete="lname"
-              />
-            </Grid>
             <Grid item xs={12}>
               <TextField
                 variant="outlined"
@@ -95,6 +102,18 @@ export default function SignUp() {
               />
             </Grid>
             <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                name="mobile"
+                label="mobile"
+                type="mobile"
+                id="mobile"
+                autoComplete="mobile"
+              />
+            </Grid>
+            <Grid item xs={12}>
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}
                 label="I want to receive inspiration, marketing promotions and updates via email."
@@ -106,16 +125,23 @@ export default function SignUp() {
             fullWidth
             variant="contained"
             color="primary"
+            disabled={loading}
             className={classes.submit}
           >
             Sign Up
           </Button>
+          {loading && (
+            <CircularProgress size={24} className={classes.buttonProgress} />
+          )}
           <Grid container justify="flex-end">
             <Grid item>
               <NavLink to="/signin">
                 <Link href="#" variant="body2">
                   Already have an account? Sign in
                 </Link>
+                <Button href="#text-buttons" color="primary">
+                  Link
+                </Button>
               </NavLink>
             </Grid>
           </Grid>
@@ -124,3 +150,20 @@ export default function SignUp() {
     </Container>
   );
 }
+
+SignUp.propTypes = {
+  loaduser: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired,
+};
+
+function mapStateToProps(state, ownProps) {
+  return {
+    user: state.user,
+  };
+}
+
+const mapDispatchToProps = {
+  loaduser,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

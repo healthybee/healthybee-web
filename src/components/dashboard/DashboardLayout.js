@@ -16,9 +16,12 @@ import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import PersonIcon from '@material-ui/icons/Person';
+
 import { mainListItems, secondaryListItems } from './listItems';
 import { Route } from 'react-router-dom';
 import Skeleton from '../common/skeleton/Skeleton';
+import { useSelector } from 'react-redux';
 
 const Inventory = lazy(() => import('./inventory/Inventory'));
 const Customers = lazy(() => import('./customers/Customers'));
@@ -118,9 +121,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Dashboard() {
+function DashboardLayout() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
+
+  const UserProfile = () => {
+    const user = useSelector((state) => state.user);
+    return (
+      <IconButton color="inherit">
+        <h8>{user.name}</h8> <PersonIcon />
+      </IconButton>
+    );
+  };
+
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -157,11 +170,7 @@ export default function Dashboard() {
           >
             Dashboard
           </Typography>
-          <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton>
+          {UserProfile()}
         </Toolbar>
       </AppBar>
       <Drawer
@@ -199,3 +208,5 @@ export default function Dashboard() {
     </div>
   );
 }
+
+export default DashboardLayout;

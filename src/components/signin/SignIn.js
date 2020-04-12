@@ -11,13 +11,13 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
+import PropTypes from 'prop-types';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { authenticateUser } from '../../api/authApi';
+import { connect } from 'react-redux';
+import { loaduser } from '../../redux/actions/userActions';
 import { makeStyles } from '@material-ui/core/styles';
 import { NavLink } from 'react-router-dom';
-import { loaduser } from '../../redux/actions/userActions';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { authenticateUser } from '../../api/authApi';
-import CircularProgress from '@material-ui/core/CircularProgress';
 
 function Copyright() {
   return (
@@ -73,11 +73,13 @@ function SignIn({ loaduser, history, ...props }) {
     event.preventDefault();
     const username = event.target.email.value,
       password = event.target.password.value;
+
     setLoading(true);
+
     authenticateUser({ username, password })
       .then((response) => {
         loaduser({ token: response.token, ...response.user });
-        history.push('/menu');
+        history.push('/dashboard');
         setLoading(false);
       })
       .catch((err) => {
