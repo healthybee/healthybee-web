@@ -7,7 +7,6 @@ import HomebgImg from '../../images/homebg.jpg';
 import { NavLink } from 'react-router-dom';
 import Paper from '@material-ui/core/Paper';
 import React from 'react';
-import SignInDrawer from '../signin/SignInDrawer';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -45,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignInSide() {
+export default function LandingPage() {
   const classes = useStyles();
 
   return (
@@ -53,10 +52,6 @@ export default function SignInSide() {
       <Grid container component="main" className={classes.root}>
         <CssBaseline />
         <Grid item xs={12} sm={8} md={7} component={Paper} elevation={6} square>
-          <div className={classes.signin}>
-            <SignInDrawer />
-          </div>
-
           <div className={classes.paper}>
             <Typography component="h1" variant="h4">
               Looking for some healthy food?
