@@ -1,5 +1,6 @@
 import { applyMiddleware, compose, createStore } from 'redux';
 
+import logger from 'redux-logger';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import rootReducer from './reducers';
 import thunk from 'redux-thunk';
@@ -11,6 +12,8 @@ export default function configureStore(initialState) {
   return createStore(
     rootReducer,
     initialState,
-    composeEnhancers(applyMiddleware(thunk, reduxImmutableStateInvariant()))
+    composeEnhancers(
+      applyMiddleware(thunk, reduxImmutableStateInvariant(), logger)
+    )
   );
 }

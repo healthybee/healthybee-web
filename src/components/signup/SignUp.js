@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
+
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Container from '@material-ui/core/Container';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import { NavLink } from 'react-router-dom';
-import { registerUser } from '../../api/authApi';
-import { loaduser } from '../../redux/actions/userActions';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
+import { connect } from 'react-redux';
+import { loaduser } from '../../redux/actions/userActions';
+import { makeStyles } from '@material-ui/core/styles';
+import { registerUser } from '../../api/authApi';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -135,14 +135,7 @@ function SignUp({ loaduser, history, ...props }) {
           )}
           <Grid container justify="flex-end">
             <Grid item>
-              <NavLink to="/signin">
-                <Link href="#" variant="body2">
-                  Already have an account? Sign in
-                </Link>
-                <Button href="#text-buttons" color="primary">
-                  Link
-                </Button>
-              </NavLink>
+              <NavLink to="/signin">Already have an account? Sign in</NavLink>
             </Grid>
           </Grid>
         </form>

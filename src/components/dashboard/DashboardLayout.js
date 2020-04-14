@@ -1,27 +1,25 @@
-import React, { lazy, Suspense } from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Drawer from '@material-ui/core/Drawer';
-import Box from '@material-ui/core/Box';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
-import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
-import MenuIcon from '@material-ui/icons/Menu';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import NotificationsIcon from '@material-ui/icons/Notifications';
-import PersonIcon from '@material-ui/icons/Person';
-
+import React, { Suspense, lazy } from 'react';
 import { mainListItems, secondaryListItems } from './listItems';
+
+import AppBar from '@material-ui/core/AppBar';
+import Box from '@material-ui/core/Box';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import Container from '@material-ui/core/Container';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Divider from '@material-ui/core/Divider';
+import Drawer from '@material-ui/core/Drawer';
+import IconButton from '@material-ui/core/IconButton';
+import Link from '@material-ui/core/Link';
+import List from '@material-ui/core/List';
+import MenuIcon from '@material-ui/icons/Menu';
+import PersonIcon from '@material-ui/icons/Person';
 import { Route } from 'react-router-dom';
 import Skeleton from '../common/skeleton/Skeleton';
-import { useSelector } from 'react-redux';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import clsx from 'clsx';
+import { connect } from 'react-redux';
+import { makeStyles } from '@material-ui/core/styles';
 
 const Inventory = lazy(() => import('./inventory/Inventory'));
 const Customers = lazy(() => import('./customers/Customers'));
@@ -121,18 +119,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function DashboardLayout() {
+function DashboardLayout({ user }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
-
-  const UserProfile = () => {
-    const user = useSelector((state) => state.user);
-    return (
-      <IconButton color="inherit">
-        <h8>{user.name}</h8> <PersonIcon />
-      </IconButton>
-    );
-  };
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -170,7 +159,9 @@ function DashboardLayout() {
           >
             Dashboard
           </Typography>
-          {UserProfile()}
+          <IconButton color="inherit">
+            {user.name} <PersonIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -209,4 +200,10 @@ function DashboardLayout() {
   );
 }
 
-export default DashboardLayout;
+function mapStateToProps(state, ownProps) {
+  return {
+    user: state.user,
+  };
+}
+
+export default connect(mapStateToProps)(DashboardLayout);
