@@ -1,9 +1,9 @@
+import {Image} from 'cloudinary-react';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import FeatureSection from './FeatureSection';
 import Footer from '../footer/Footer';
 import Grid from '@material-ui/core/Grid';
-import HomebgImg from '../../images/homebg.jpg';
 import { NavLink } from 'react-router-dom';
 import Paper from '@material-ui/core/Paper';
 import React from 'react';
@@ -12,16 +12,6 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {},
-  image: {
-    backgroundImage: `url(${HomebgImg})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundColor:
-      theme.palette.type === 'light'
-        ? theme.palette.grey[50]
-        : theme.palette.grey[900],
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  },
   paper: {
     margin: theme.spacing(8, 8, 4, 8),
     display: 'flex',
@@ -78,7 +68,9 @@ export default function LandingPage() {
             <br />
           </div>
         </Grid>
-        <Grid item xs={false} sm={4} md={5} className={classes.image} />
+        <Grid item xs={false} sm={4} md={5}>
+          <Image cloudName="healthybee" publicId="healthybee/homebg_msigvo" width="300" height="300" crop="scale" />
+        </Grid>
       </Grid>
       <FeatureSection />
       <Footer />
