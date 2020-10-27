@@ -48,11 +48,6 @@ const Snackbar = Loadable({
   loading: Loading
 });
 
-const SectionCarousel = Loadable({
-  loader: () => import('./Sections/SectionCarousel.js'),
-  loading: Loading
-});
-
 const SectionMainOffer = Loadable({
   loader: () => import('./Sections/SectionMainOffer.js'),
   loading: Loading
@@ -91,7 +86,6 @@ class Components extends React.Component {
           {/* <SectionJavascript /> */}
           {/* <SectionDownload /> */}
           <SectionMainOffer />
-          <SectionCarousel />
           {/* <SectionTypography /> */}
           {/* <SectionCompletedExamples /> */}
           {/* <SectionLogin />

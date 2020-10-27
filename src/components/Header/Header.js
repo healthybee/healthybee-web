@@ -16,7 +16,6 @@ import ListItem from '@material-ui/core/ListItem';
 // @material-ui/icons
 import Menu from '@material-ui/icons/Menu';
 import logo1 from '../../images/logo1.png';
-import logo2 from '../../images/logo2.png';
 import { Link } from 'react-router-dom';
 // core components
 import headerStyle from '../../assets/jss/material-kit-react/components/headerStyle.js';
@@ -80,7 +79,6 @@ class Header extends React.Component {
     const brandComponent = (
       <Link to={'/'}>
         {/* <Button className={classes.title}>{brand}</Button> */}
-        <img src={logo2} height="50px" alt="logo1" />
         <img src={logo1} height="35px" alt="logo2" />
         {/* <sup><i className="fa fa-copyright"/></sup> */}
       </Link>
@@ -99,19 +97,9 @@ class Header extends React.Component {
             )}
           </div>
           <Hidden smDown implementation="css">
-            <Link to={'/order-now'} className={classes.link}>
+            <Link to={'/'} className={classes.link}>
               <Button color="default" size="medium">
-                Order Now
-              </Button>
-            </Link>
-            {/* <Link to={'/menu'} className={classes.link}>
-              <Button color="default" size="medium">
-                Menu
-              </Button>
-            </Link> */}
-            <Link to={'/about-us'} className={classes.link}>
-              <Button color="default" size="medium">
-                About Us
+                Home
               </Button>
             </Link>
             <Link to={'/contact-us'} className={classes.link}>

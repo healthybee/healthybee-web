@@ -20,15 +20,7 @@ class SectionMainOffer extends React.Component {
         <div className={classes.container}>
           <GridContainer className={classes.textCenter} justify="center">
             <GridItem xs={12} sm={12} md={8}>
-              <h2>
-                Get Upto
-                <b> 20% </b> Discount on <i className="fas fa-utensils" /> Dine
-                In.
-              </h2>
-              <h4>
-                Use promo code <strong>Today</strong> at our Baner outlet to get
-                offer.
-              </h4>
+              <h2>Detox Program</h2>
             </GridItem>
             <GridItem xs={12} sm={8} md={6}>
               <OfferModal />

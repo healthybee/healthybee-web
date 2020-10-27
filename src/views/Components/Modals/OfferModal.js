@@ -18,6 +18,7 @@ import Button from '../../../components/CustomButtons/Button.js';
 import modalStyle from '../../../assets/jss/material-kit-react/modalStyle.js';
 import CustomizedSnackbars from '../../../components/Snackbar/Snackbar.js';
 import { BASE_API } from '../../../Config/constants';
+import { Link } from 'react-router-dom';
 
 function Transition(props) {
   return <Slide direction="down" {...props} />;
@@ -74,14 +75,12 @@ class Modal extends React.Component {
     const { classes } = this.props;
     return (
       <div>
-        <Button
-          color="warning"
-          size="lg"
-          round
-          onClick={() => this.handleClickOpen('modal')}
-        >
-          Get Promo Code
-        </Button>
+        <Link to={'/event'}>
+          <Button color="warning" size="lg" round>
+            Get Started
+          </Button>
+        </Link>
+
         <Dialog
           classes={{
             root: classes.center,

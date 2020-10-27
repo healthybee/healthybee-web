@@ -45,7 +45,7 @@
     "precommit": "lint-staged"
   },
   "devDependencies": {
-    "@babel/runtime": "7.0.0"  
+    "@babel/runtime": "7.0.0"
   },
   "browserslist": [
     ">0.2%",

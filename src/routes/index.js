@@ -17,6 +17,10 @@ const Components = Loadable({
     loader: () => import('../views/MenuPage/MenuPage.js'),
     loading: Loading
   }),
+  Event = Loadable({
+    loader: () => import('../views/Event/Event'),
+    loading: Loading
+  }),
   OrderNow = Loadable({
     loader: () => import('../views/OrderNow/OrderNow'),
     loading: Loading
@@ -27,6 +31,7 @@ let indexRoutes = [
   { path: '/contact-us', name: 'ContactUs', component: ContactUs },
   { path: '/menu', name: 'MenuPage', component: MenuPage },
   { path: '/order-now', name: 'OrderNow', component: OrderNow },
+  { path: '/event', name: 'Event', component: Event },
   { path: '/', name: 'Components', component: Components }
 ];
 
