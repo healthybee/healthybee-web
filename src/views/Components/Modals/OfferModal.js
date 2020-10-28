@@ -75,7 +75,7 @@ class Modal extends React.Component {
     const { classes } = this.props;
     return (
       <div>
-        <Link to={'/event'}>
+        <Link to={'/fitness-programs'}>
           <Button color="warning" size="lg" round>
             Get Started
           </Button>

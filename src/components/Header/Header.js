@@ -97,9 +97,9 @@ class Header extends React.Component {
             )}
           </div>
           <Hidden smDown implementation="css">
-            <Link to={'/'} className={classes.link}>
+            <Link to={'/fitness-programs'} className={classes.link}>
               <Button color="default" size="medium">
-                Home
+                Fitness Programs
               </Button>
             </Link>
             <Link to={'/contact-us'} className={classes.link}>

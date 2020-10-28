@@ -18,17 +18,6 @@ class EventSection extends React.Component {
         <div className={classes.container}>
           <GridContainer justify="center">
             <GridItem xs={12} sm={12} md={8}>
-              <h2>How does it work?</h2>
-              <h4>
-                In this detox program, we will provide 5 Delicious, immunity
-                boosting juices in a day delivered to your location for 2 days.
-                You don’t have to consume anything solid during these 2 days.
-                Apart from Juices we delivery you can drink water. Come join us
-                and let’s get toxins out of your body!
-              </h4>
-            </GridItem>
-
-            <GridItem xs={12} sm={12} md={8}>
               <h2>Why Detox is required?</h2>
               <h4>
                 When we are eating, up to 80% of our energy is consumed in
@@ -43,16 +32,26 @@ class EventSection extends React.Component {
               </h4>
             </GridItem>
 
+            <GridItem xs={12} sm={12} md={8}>
+              <h2>How does it work?</h2>
+              <h4>
+                In this detox program, we will provide 5 delicious, immunity
+                boosting juices in a day delivered to your location for 2 days.
+                You don’t have to consume anything solid during these 2 days.
+                Come join us and let’s get toxins out of your body!
+              </h4>
+            </GridItem>
+
             <GridItem xs={12} sm={12} md={8} justify="none">
               <h2>Benefits of Detoxification:</h2>
               <h4>
                 <ul>
                   <li>Elimination of toxins from the body</li>
-                  <li>Saferapid weight loss for those who are overweight</li>
+                  <li>Safe rapid weight loss for those who are overweight</li>
                   <li>Clearer skin</li>
-                  <li>Extreme mental clarity </li>
+                  <li>Extreme mental clarity</li>
                   <li>Greater flexibility</li>
-                  <li>Tons of more </li>
+                  <li>Tons of more energy</li>
                 </ul>
               </h4>
             </GridItem>

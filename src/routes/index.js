@@ -1,5 +1,6 @@
 import Loadable from 'react-loadable';
 import Loading from '../components/Loading/loading';
+import ProgramRegistration from '../views/Event/ProgramRegistration';
 
 const Components = Loadable({
     loader: () => import('../views/Components/Components.js'),
@@ -31,7 +32,12 @@ let indexRoutes = [
   { path: '/contact-us', name: 'ContactUs', component: ContactUs },
   { path: '/menu', name: 'MenuPage', component: MenuPage },
   { path: '/order-now', name: 'OrderNow', component: OrderNow },
-  { path: '/event', name: 'Event', component: Event },
+  {
+    path: '/program-registration',
+    name: 'ProgramRegistration',
+    component: ProgramRegistration
+  },
+  { path: '/fitness-programs', name: 'Event', component: Event },
   { path: '/', name: 'Components', component: Components }
 ];
 

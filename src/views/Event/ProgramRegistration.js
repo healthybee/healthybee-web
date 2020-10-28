@@ -24,26 +24,21 @@ class Event extends React.Component {
         <Header color="primary" brand="HealthyBee" fixed {...rest} />
 
         <Parallax
-          small
           filter
+          small
           image={require('../../assets/img/food/pexels-event.jpg')}
-        >
-          <div className={classes.container}>
-            <GridContainer>
-              <GridItem xs={12} sm={12} md={6}>
-                <h1 className={classes.title}>2 Days Detox Program</h1>
-                <h3> We consume nothing but fresh juices for 2 days.</h3>
-                <h3> </h3>
-                <h4>Coming Soon ..., please call us for more information .</h4>
-                <h4>Mobile No: +91-8793580502.</h4>
-
-                <br />
-              </GridItem>
-            </GridContainer>
-          </div>
-        </Parallax>
+        />
         <div className={classNames(classes.main, classes.mainRaised)}>
-          <EventSection />
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdGs7k79V0rvpeiNfNIm6P6x9hdSXKYn6nhC0heQ_xkNW_CYw/viewform?embedded=true"
+            width="800"
+            height="1405"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading…
+          </iframe>
         </div>
         <Footer />
       </div>
