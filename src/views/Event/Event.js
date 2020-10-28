@@ -34,7 +34,7 @@ class Event extends React.Component {
                 <h3> We consume nothing but fresh juices for 2 days.</h3>
                 <h3> </h3>
                 <h4>Coming Soon ..., please call us for more information .</h4>
-                <h4>Mobile No: +91-99756 90709.</h4>
+                <h4>Mobile No: +91-8793580502.</h4>
 
                 <br />
               </GridItem>
