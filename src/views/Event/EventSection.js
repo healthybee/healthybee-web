@@ -3,6 +3,7 @@ import React from 'react';
 
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles';
+import Accordion from '../Components/Accordion/Accordion.js';
 // @material-ui/icons
 import GridContainer from '../../components/Grid/GridContainer.js';
 import GridItem from '../../components/Grid/GridItem.js';
@@ -54,6 +55,10 @@ class EventSection extends React.Component {
                   <li>Tons of more energy</li>
                 </ul>
               </h4>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={8}>
+              <h2>Frequently Asked Questions:</h2>
+              <Accordion />
             </GridItem>
           </GridContainer>
           <br />
