@@ -139,21 +139,9 @@ class Header extends React.Component {
                   </Link>
                 </ListItem>
                 <ListItem className={classes.listItem}>
-                  <Link to={'/order-now'} className={classes.link}>
+                  <Link to={'/fitness-programs'} className={classes.link}>
                     <Button color="default" size="large">
-                      Order Now
-                    </Button>
-                  </Link>
-                </ListItem>
-                {/* <Link to={'/menu'} className={classes.link}>
-              <Button color="default" size="medium">
-                Menu
-              </Button>
-            </Link> */}
-                <ListItem className={classes.listItem}>
-                  <Link to={'/about-us'} className={classes.link}>
-                    <Button color="default" size="large">
-                      About Us
+                      Fitness Programs
                     </Button>
                   </Link>
                 </ListItem>

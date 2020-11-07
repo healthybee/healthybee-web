@@ -42,7 +42,7 @@ class EventSection extends React.Component {
               </h4>
             </GridItem>
 
-            <GridItem xs={12} sm={12} md={8} justify="none">
+            <GridItem xs={12} sm={12} md={8}>
               <h2>Benefits of Detoxification:</h2>
               <h4>
                 <ul>
