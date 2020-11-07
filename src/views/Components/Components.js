@@ -59,7 +59,7 @@ class Components extends React.Component {
     return (
       <div>
         <Header brand="HealthyBee" fixed color="primary" {...rest} />
-        <Parallax image={require('../../assets/img/bg4.jpeg')}>
+        <Parallax image={require('../../assets/img/detox-web-2.jpg')}>
           <div className={classes.container}>
             <GridContainer>
               <GridItem>

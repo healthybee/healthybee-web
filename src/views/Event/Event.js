@@ -22,7 +22,7 @@ class Event extends React.Component {
       <div>
         <Header color="primary" brand="HealthyBee" fixed {...rest} />
 
-        <Parallax image={require('../../assets/img/food/pexels-event.jpg')}>
+        <Parallax image={require('../../assets/img/detox-program.jpg')}>
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
