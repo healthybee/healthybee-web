@@ -19,7 +19,7 @@ class EventSection extends React.Component {
         <div className={classes.container}>
           <GridContainer justify="center">
             <GridItem xs={12} sm={12} md={8}>
-              <h2>Why Detox is required?</h2>
+              <h2>Why Detox is required ?</h2>
               <h4>
                 When we are eating, up to 80% of our energy is consumed in
                 digestion. During a detox, the body no longer needs to digest,

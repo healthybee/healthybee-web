@@ -188,9 +188,11 @@ export default function CustomizedAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            First Juice: 09:00 AM to 09:30 AM Second Juice: 11:00 AM to 11:30 PM
-            Third Juice: 1:30 PM to 02:00 PM Fourth Juice: 05:00 PM to 05:30 PM
-            Fifth Juice: 07:00 PM to 07:30 PM
+            <b>First Juice:</b> 09:00 AM to 09:30 AM <b>&nbsp; Second Juice:</b>{' '}
+            11:00 AM to 11:30 PM <br />
+            <b> Third Juice:</b> 1:30 PM to 02:00 PM{' '}
+            <b> &nbsp; Fourth Juice:</b> 05:00 PM to 05:30 PM <br />
+            <b> Fifth Juice:</b> 07:00 PM to 07:30 PM
           </Typography>
         </AccordionDetails>
       </Accordion>
