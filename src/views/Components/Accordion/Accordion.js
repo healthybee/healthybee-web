@@ -178,6 +178,42 @@ export default function CustomizedAccordions() {
           </Typography>
         </AccordionDetails>
       </Accordion>
+      <Accordion
+        square
+        expanded={expanded === 'panel8'}
+        onChange={handleChange('panel8')}
+      >
+        <AccordionSummary aria-controls="panel8d-content" id="panel8d-header">
+          <Typography>What is a rough schedule of the two days ?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            First Juice: 09:00 AM to 09:30 AM Second Juice: 11:00 AM to 11:30 PM
+            Third Juice: 1:30 PM to 02:00 PM Fourth Juice: 05:00 PM to 05:30 PM
+            Fifth Juice: 07:00 PM to 07:30 PM
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion
+        square
+        expanded={expanded === 'panel9'}
+        onChange={handleChange('panel9')}
+      >
+        <AccordionSummary aria-controls="panel9d-content" id="panel9d-header">
+          <Typography>
+            How will I feel during the 2 day detox program ?
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            A Detox is a cleansing process. As your body throws out the toxins
+            sitting inside, it is common to experience detox symptoms such as
+            headaches, nausea, vomiting, acidity and weakness. However, this
+            discomfort is only temporary. Once your body is cleansed through
+            fasting, you will experience abundant energy and mental clarity.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
     </div>
   );
 }
