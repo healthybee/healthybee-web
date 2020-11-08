@@ -57,6 +57,32 @@ class EventSection extends React.Component {
               </h4>
             </GridItem>
             <GridItem xs={12} sm={12} md={8}>
+              <h2>What will you get in this program ?</h2>
+              <h4>
+                <ul>
+                  <li>
+                    Dietician consultation to plan meal post-detox program.
+                  </li>
+                  <li>
+                    5 Juices a day for two days delivered to your location.
+                  </li>
+                  <li>DIY Detox Recipe PDF.</li>
+                  <li>Detailed FAQ document.</li>
+                  <li>Extend Community Support.</li>
+                </ul>
+              </h4>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={8}>
+              <h2>Fees Detail:</h2>
+              <h4>
+                <ul>
+                  <li>
+                    Program Fee: <b>Rs.2500/-</b>
+                  </li>
+                </ul>
+              </h4>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={8}>
               <h2>Frequently Asked Questions:</h2>
               <Accordion />
             </GridItem>
