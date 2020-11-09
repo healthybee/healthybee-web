@@ -25,7 +25,7 @@ class SectionMainOffer extends React.Component {
             sm={12}
             md={12}
           >
-            <GridItem xs={4} sm={4} md={4} spacing={10}>
+            <GridItem xs={12} sm={4} md={4} spacing={10}>
               <h3>Delivery @ Doorstep</h3>
               <h4>Stay indoor, Stay safe</h4>
               <OfferModal
@@ -34,7 +34,7 @@ class SectionMainOffer extends React.Component {
                 redirectUrl={'/delivery'}
               />
             </GridItem>
-            <GridItem xs={4} sm={4} md={4} spacing={10}>
+            <GridItem xs={12} sm={4} md={4} spacing={10}>
               <h3>Detox Program</h3>
               <h4>Let's get toxin out of your body.</h4>
               <OfferModal
@@ -43,7 +43,7 @@ class SectionMainOffer extends React.Component {
                 redirectUrl={'/fitness-programs'}
               />
             </GridItem>
-            <GridItem xs={4} sm={4} md={4} spacing={10}>
+            <GridItem xs={12} sm={4} md={4} spacing={10}>
               <h3>Personalise subscription</h3>
               <h4>Diet Plan | Meals | Delivery | Report</h4>
               <OfferModal
