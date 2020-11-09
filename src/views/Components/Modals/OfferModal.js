@@ -18,7 +18,6 @@ import Button from '../../../components/CustomButtons/Button.js';
 import modalStyle from '../../../assets/jss/material-kit-react/modalStyle.js';
 import CustomizedSnackbars from '../../../components/Snackbar/Snackbar.js';
 import { BASE_API } from '../../../Config/constants';
-import { Link } from 'react-router-dom';
 
 function Transition(props) {
   return <Slide direction="down" {...props} />;
