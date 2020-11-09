@@ -28,7 +28,11 @@ class SectionMainOffer extends React.Component {
             <GridItem xs={4} sm={4} md={4} spacing={10}>
               <h3>Delivery @ Doorstep</h3>
               <h4>Stay indoor, Stay safe</h4>
-              <OfferModal btntext={'Order Online'} isDisable={true} />
+              <OfferModal
+                btntext={'Order Online'}
+                isDisable={true}
+                redirectUrl={'/delivery'}
+              />
             </GridItem>
             <GridItem xs={4} sm={4} md={4} spacing={10}>
               <h3>Detox Program</h3>
@@ -42,7 +46,11 @@ class SectionMainOffer extends React.Component {
             <GridItem xs={4} sm={4} md={4} spacing={10}>
               <h3>Personalise subscription</h3>
               <h4>Diet Plan | Meals | Delivery | Report</h4>
-              <OfferModal btntext={'Subscribe Now'} isDisable={true} />
+              <OfferModal
+                btntext={'Subscribe Now'}
+                isDisable={true}
+                redirectUrl={'/subscribe'}
+              />
             </GridItem>
           </GridContainer>
           <br />
