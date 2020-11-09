@@ -72,15 +72,19 @@ class Modal extends React.Component {
   }
 
   render() {
-    const { classes } = this.props;
+    const { classes, btntext, isDisable, redirectUrl } = this.props;
     return (
       <div>
-        <Link to={'/fitness-programs'}>
-          <Button color="warning" size="lg" round>
-            Get Started
-          </Button>
-        </Link>
-
+        {/* <Link to={'/fitness-programs'}> */}
+        <Button
+          color="warning"
+          size="lg"
+          round
+          disabled={isDisable}
+          href={redirectUrl}
+        >
+          {btntext}
+        </Button>
         <Dialog
           classes={{
             root: classes.center,

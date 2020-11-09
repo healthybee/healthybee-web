@@ -14,6 +14,7 @@ import GridItem from '../../components/Grid/GridItem.js';
 import Button from '../../components/CustomButtons/Button.js';
 import landingPageStyle from '../../assets/jss/material-kit-react/views/landingPage.js';
 import EventSection from './EventSection.js';
+import { Container } from '@material-ui/core';
 
 class Event extends React.Component {
   render() {
@@ -23,13 +24,17 @@ class Event extends React.Component {
         <Header color="primary" brand="HealthyBee" fixed {...rest} />
 
         <Parallax image={require('../../assets/img/detox-program.jpg')}>
-          <div className={classes.container}>
-            <GridContainer>
+          <Container>
+            <GridContainer
+              direction="row"
+              justify="flex-end"
+              alignItems="flex-start"
+            >
               <GridItem xs={12} sm={12} md={6}>
-                <h1 className={classes.title}>2 Days Detox Program</h1>
-                <h3> We consume nothing but fresh juices for 2 days.</h3>
-                <h4>Coming Soon ..., please call us for more information .</h4>
-                <h4>Mobile No: +91-8793580502.</h4>
+                <h1>2 Days Detox Program</h1>
+                <h3> We give fresh juices for 2 days.</h3>
+                {/* <h4>Coming Soon ... please call us for more information .</h4> */}
+                {/* <h4>Mobile No: +91-8793580502.</h4> */}
                 <Button
                   color="warning"
                   size="md"
@@ -42,7 +47,7 @@ class Event extends React.Component {
                 </Button>
               </GridItem>
             </GridContainer>
-          </div>
+          </Container>
         </Parallax>
         <div className={classNames(classes.main, classes.mainRaised)}>
           <EventSection />

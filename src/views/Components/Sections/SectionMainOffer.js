@@ -18,13 +18,31 @@ class SectionMainOffer extends React.Component {
     return (
       <div className={classes.section}>
         <div className={classes.container}>
-          <GridContainer className={classes.textCenter} justify="center">
-            <GridItem xs={12} sm={12} md={8}>
-              <h2>Detox Program</h2>
-              <h4>Let’s get toxins out of your body!</h4>
+          <GridContainer
+            className={classes.textCenter}
+            justify="center"
+            xs={12}
+            sm={12}
+            md={12}
+          >
+            <GridItem xs={4} sm={4} md={4} spacing={10}>
+              <h3>Delivery @ Doorstep</h3>
+              <h4>Stay indoor, Stay safe</h4>
+              <OfferModal btntext={'Order Online'} isDisable={true} />
             </GridItem>
-            <GridItem xs={12} sm={8} md={6}>
-              <OfferModal />
+            <GridItem xs={4} sm={4} md={4} spacing={10}>
+              <h3>Detox Program</h3>
+              <h4>Let's get toxin out of your body.</h4>
+              <OfferModal
+                btntext={'Get Started'}
+                isDisable={false}
+                redirectUrl={'/fitness-programs'}
+              />
+            </GridItem>
+            <GridItem xs={4} sm={4} md={4} spacing={10}>
+              <h3>Personalise subscription</h3>
+              <h4>Diet Plan | Meals | Delivery | Report</h4>
+              <OfferModal btntext={'Subscribe Now'} isDisable={true} />
             </GridItem>
           </GridContainer>
           <br />
