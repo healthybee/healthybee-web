@@ -19,6 +19,9 @@ import modalStyle from '../../../assets/jss/material-kit-react/modalStyle.js';
 import CustomizedSnackbars from '../../../components/Snackbar/Snackbar.js';
 import { BASE_API } from '../../../Config/constants';
 
+import OnlineOrderModal from '../Modals/OnlineOrderModal.js';
+import ComingSoonModal from '../Modals/ComingSoonModal.js';
+
 function Transition(props) {
   return <Slide direction="down" {...props} />;
 }
@@ -71,19 +74,22 @@ class Modal extends React.Component {
   }
 
   render() {
-    const { classes, btntext, isDisable, redirectUrl } = this.props;
+    const { classes, btntext, isDisable, modalType, redirectUrl } = this.props;
     return (
       <div>
-        {/* <Link to={'/fitness-programs'}> */}
-        <Button
-          color="warning"
-          size="lg"
-          round
-          disabled={isDisable}
-          href={redirectUrl}
-        >
-          {btntext}
-        </Button>
+        {modalType === '' && (
+          <Button
+            color="warning"
+            size="lg"
+            round
+            disabled={isDisable}
+            href={redirectUrl}
+          >
+            {btntext}
+          </Button>
+        )}
+        {modalType === 'onlineplatform' && <OnlineOrderModal />}
+        {modalType === 'comingsoon' && <ComingSoonModal />}
         <Dialog
           classes={{
             root: classes.center,

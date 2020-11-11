@@ -30,8 +30,9 @@ class SectionMainOffer extends React.Component {
               <h4>Stay indoor, Stay safe</h4>
               <OfferModal
                 btntext={'Order Online'}
-                isDisable={true}
+                isDisable={false}
                 redirectUrl={'/delivery'}
+                modalType={'onlineplatform'}
               />
             </GridItem>
             <GridItem xs={12} sm={4} md={4} spacing={10}>
@@ -41,6 +42,7 @@ class SectionMainOffer extends React.Component {
                 btntext={'Get Started'}
                 isDisable={false}
                 redirectUrl={'/fitness-programs'}
+                modalType={''}
               />
             </GridItem>
             <GridItem xs={12} sm={4} md={4} spacing={10}>
@@ -48,8 +50,9 @@ class SectionMainOffer extends React.Component {
               <h4>Diet Plan | Meals | Delivery | Report</h4>
               <OfferModal
                 btntext={'Subscribe Now'}
-                isDisable={true}
+                isDisable={false}
                 redirectUrl={'/subscribe'}
+                modalType={'comingsoon'}
               />
             </GridItem>
           </GridContainer>

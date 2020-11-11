@@ -1,3 +1,4 @@
+// import { Subscriptions } from '@material-ui/icons';
 import Loadable from 'react-loadable';
 import Loading from '../components/Loading/loading';
 import ProgramRegistration from '../views/Event/ProgramRegistration';
@@ -22,6 +23,10 @@ const Components = Loadable({
     loader: () => import('../views/Event/Event'),
     loading: Loading
   }),
+  SubscriptionActivity = Loadable({
+    loader: () => import('../views/Subscriptions/Subscriptions'),
+    loading: Loading
+  }),
   OrderNow = Loadable({
     loader: () => import('../views/OrderNow/OrderNow'),
     loading: Loading
@@ -38,6 +43,11 @@ let indexRoutes = [
     component: ProgramRegistration
   },
   { path: '/fitness-programs', name: 'Event', component: Event },
+  {
+    path: '/subscribe',
+    name: 'Subscriptions',
+    component: SubscriptionActivity
+  },
   { path: '/', name: 'Components', component: Components }
 ];
 
