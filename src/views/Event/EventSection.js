@@ -4,6 +4,7 @@ import React from 'react';
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles';
 import Accordion from '../Components/Accordion/Accordion.js';
+import Box from '@material-ui/core/Box';
 // @material-ui/icons
 import GridContainer from '../../components/Grid/GridContainer.js';
 import GridItem from '../../components/Grid/GridItem.js';
@@ -80,6 +81,18 @@ class EventSection extends React.Component {
                     Program Fee: <b>Rs.2500/-</b>
                   </li>
                 </ul>
+                <Box pl={3}>
+                  <Button
+                    color="warning"
+                    size="md"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdGs7k79V0rvpeiNfNIm6P6x9hdSXKYn6nhC0heQ_xkNW_CYw/viewform?embedded=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    round
+                  >
+                    Register Now
+                  </Button>
+                </Box>
               </h4>
             </GridItem>
             <GridItem xs={12} sm={12} md={8}>

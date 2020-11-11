@@ -104,7 +104,7 @@ export default function CustomizedDialogs() {
             href="https://www.zomato.com/pune/restaurants/healthybee?category=2"
             autoFocus
             onClick={handleClose}
-            color="warning"
+            color="danger"
             className={classes.root}
             target="_blank"
           >

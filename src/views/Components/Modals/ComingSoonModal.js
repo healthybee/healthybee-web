@@ -89,11 +89,11 @@ export default function CustomizedDialogs() {
         open={open}
       >
         <DialogTitle id="customized-dialog-title">
-          <h2>
+          <h2 style={{ color: 'green' }}>
             <b>Coming Soon...</b>
           </h2>
         </DialogTitle>
-        <DialogContent dividers>
+        <DialogContent dividers style={{ color: 'green' }}>
           <h3 align="center">
             {' '}
             <b>
