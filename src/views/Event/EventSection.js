@@ -1,6 +1,8 @@
 /*eslint-disable*/
 import React from 'react';
 
+import ReactPlayer from 'react-player';
+
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles';
 import Accordion from '../Components/Accordion/Accordion.js';
@@ -72,6 +74,9 @@ class EventSection extends React.Component {
                   <li>Extend Community Support.</li>
                 </ul>
               </h4>
+              <div>
+                <ReactPlayer url="https://youtu.be/vCerLmXZw7k" />
+              </div>
             </GridItem>
             <GridItem xs={12} sm={12} md={8}>
               <h2>Fees Detail:</h2>
