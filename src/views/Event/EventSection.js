@@ -75,7 +75,10 @@ class EventSection extends React.Component {
                 </ul>
               </h4>
               <div>
-                <ReactPlayer url="https://youtu.be/vCerLmXZw7k" />
+                <ReactPlayer
+                  url="https://youtu.be/vCerLmXZw7k"
+                  controls={true}
+                />
               </div>
             </GridItem>
             <GridItem xs={12} sm={12} md={8}>
