@@ -78,6 +78,8 @@ class EventSection extends React.Component {
                 <ReactPlayer
                   url="https://youtu.be/vCerLmXZw7k"
                   controls={true}
+                  width="100%"
+                  height="340px"
                 />
               </div>
             </GridItem>
