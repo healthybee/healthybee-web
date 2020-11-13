@@ -22,6 +22,14 @@ class EventSection extends React.Component {
         <div className={classes.container}>
           <GridContainer justify="center">
             <GridItem xs={12} sm={12} md={8}>
+              <Box mt={4}>
+                <ReactPlayer
+                  url="https://youtu.be/vCerLmXZw7k"
+                  controls={true}
+                  width="100%"
+                  height="340px"
+                />
+              </Box>
               <h2>Why Detox is required ?</h2>
               <h4>
                 When we are eating, up to 80% of our energy is consumed in
@@ -74,14 +82,6 @@ class EventSection extends React.Component {
                   <li>Extend Community Support.</li>
                 </ul>
               </h4>
-              <div>
-                <ReactPlayer
-                  url="https://youtu.be/vCerLmXZw7k"
-                  controls={true}
-                  width="100%"
-                  height="340px"
-                />
-              </div>
             </GridItem>
             <GridItem xs={12} sm={12} md={8}>
               <h2>Fees Detail:</h2>
