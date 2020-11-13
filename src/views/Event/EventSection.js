@@ -84,11 +84,21 @@ class EventSection extends React.Component {
               </h4>
             </GridItem>
             <GridItem xs={12} sm={12} md={8}>
-              <h2>Fees Detail:</h2>
+              <Box component="h2" display="inline">
+                Program Details:
+              </Box>
               <h4>
                 <ul>
                   <li>
-                    Program Fee: <b>Rs.2500/-</b>
+                    Program Fees:{' '}
+                    <b>
+                      <strike>Rs.2500</strike>
+                    </b>{' '}
+                    <b>Rs.2000</b>{' '}
+                    <i>(Offer price 20% off on Diwali occasion)</i>
+                  </li>
+                  <li>
+                    Program Date: <b>28th Nov to 29th Nov</b>
                   </li>
                 </ul>
                 <Box pl={3}>
