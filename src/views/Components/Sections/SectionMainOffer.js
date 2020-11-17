@@ -26,7 +26,7 @@ class SectionMainOffer extends React.Component {
             md={12}
           >
             <GridItem xs={12} sm={4} md={4} spacing={10}>
-              <h3>Delivery @ Doorsteps</h3>
+              <h3>Delivery @ Doorstep</h3>
               <h4>Stay indoor, Stay safe</h4>
               <OfferModal
                 btntext={'Order Online'}
