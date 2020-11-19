@@ -27,15 +27,6 @@ function Footer({ ...props }) {
   return (
     <footer className={footerClasses}>
       <div className={classes.container}>
-        <div className={classes.left}>
-          <List className={classes.list}>
-            <ListItem className={classes.inlineBlock}>
-              <Link to={'/contact-us'} className={classes.block}>
-                Contact us
-              </Link>
-            </ListItem>
-          </List>
-        </div>
         <div className={classes.container}>
           <div className={classes.left}>
             <List className={classes.list}>

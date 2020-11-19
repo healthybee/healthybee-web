@@ -59,27 +59,25 @@ const DialogContent = withStyles(theme => ({
   }
 }))(MuiDialogContent);
 
-// const DialogActions = withStyles((theme) => ({
-//   root: {
-//     margin: 0,
-//     padding: theme.spacing(1),
-//   },
-// }))(MuiDialogActions);
-
 export default function CustomizedDialogs() {
   const classes = buttonstyle();
   const [open, setOpen] = React.useState(false);
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
   const handleClose = () => {
     setOpen(false);
   };
 
   return (
     <div className={classes.root}>
-      <Button color="warning" size="lg" round onClick={handleClickOpen}>
+      <Button
+        color="warning"
+        size="lg"
+        round
+        href="https://dinein.inresto.com/wla/wla-welcome?cgId=5fa26edf42903d80ba197997"
+        className={classes.link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Order Online
       </Button>
 

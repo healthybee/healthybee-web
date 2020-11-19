@@ -97,13 +97,24 @@ class Header extends React.Component {
             )}
           </div>
           <Hidden smDown implementation="css">
+            <a
+              href="https://dinein.inresto.com/wla/wla-welcome?cgId=5fa26edf42903d80ba197997"
+              className={classes.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className={classes.link} size="md" round>
+                Order Now
+              </Button>
+            </a>
+
             <Link to={'/fitness-programs'} className={classes.link}>
-              <Button color="default" size="medium">
+              <Button color="default" size="md">
                 Fitness Programs
               </Button>
             </Link>
             <Link to={'/contact-us'} className={classes.link}>
-              <Button color="default" size="medium">
+              <Button color="default" size="md">
                 Contact Us
               </Button>
             </Link>
@@ -138,6 +149,19 @@ class Header extends React.Component {
                     </Button>
                   </Link>
                 </ListItem>
+                <ListItem className={classes.listItem}>
+                  <a
+                    href="https://dinein.inresto.com/wla/wla-welcome?cgId=5fa26edf42903d80ba197997"
+                    className={classes.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className={classes.link} size="md" round>
+                      Order Now
+                    </Button>
+                  </a>
+                </ListItem>
+
                 <ListItem className={classes.listItem}>
                   <Link to={'/fitness-programs'} className={classes.link}>
                     <Button color="default" size="large">
