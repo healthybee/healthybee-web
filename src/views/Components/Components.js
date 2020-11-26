@@ -59,15 +59,15 @@ class Components extends React.Component {
     return (
       <div>
         <Header brand="HealthyBee" fixed color="primary" {...rest} />
-        <Parallax image={require('../../assets/img/detox-web-2.jpg')}>
+        <Parallax image={require('../../assets/img/Chicken-salad.jpg')}>
           <div className={classes.container}>
             <GridContainer>
               <GridItem>
                 <div className={classes.brand}>
-                  <h1 className={classes.title}>
+                  <h1 className={classes.title} style={{ color: 'green' }}>
                     Eat Right. <br /> Love Yourself.
                   </h1>
-                  <h3 className={classes.subtitle}>
+                  <h3 className={classes.subtitle} style={{ color: 'red' }}>
                     Happiness starts with healthy food.
                   </h3>
                 </div>
