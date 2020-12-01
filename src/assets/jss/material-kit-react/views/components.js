@@ -36,15 +36,15 @@ const componentsStyle = {
   },
   headingTxt: {
     color: 'orangered',
-    textStroke: '1px black',
-    fontFamily: 'cursive',
+    textStroke: '2px #fff4f4',
+    fontFamily: 'fantasy',
     fontSize: '5rem'
   },
   subtitleTxt: {
-    color: 'orangered',
-    textStroke: '1px black',
-    fontFamily: 'cursive',
-    fontSize: '1.313rem'
+    color: 'red',
+    textStroke: '1px #651a1a',
+    fontFamily: 'ui-monospace',
+    fontSize: '1.6rem'
   }
 };
 
