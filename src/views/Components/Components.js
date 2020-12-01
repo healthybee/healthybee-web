@@ -64,10 +64,10 @@ class Components extends React.Component {
             <GridContainer>
               <GridItem>
                 <div className={classes.brand}>
-                  <h1 className={classes.title} style={{ color: '#574515' }}>
+                  <h1 className={classes.headingTxt}>
                     Eat Right. <br /> Love Yourself.
                   </h1>
-                  <h3 className={classes.subtitle} style={{ color: '#574515' }}>
+                  <h3 className={classes.subtitleTxt}>
                     Happiness starts with healthy food.
                   </h3>
                 </div>
