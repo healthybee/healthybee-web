@@ -44,7 +44,8 @@ const componentsStyle = {
     color: 'red',
     textStroke: '1px #651a1a',
     fontFamily: 'ui-monospace',
-    fontSize: '1.6rem'
+    fontSize: '1.6rem',
+    marginTop: '25%'
   }
 };
 
