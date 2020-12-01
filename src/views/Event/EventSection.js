@@ -94,11 +94,10 @@ class EventSection extends React.Component {
                     <b>
                       <strike>Rs.2500</strike>
                     </b>{' '}
-                    <b>Rs.2000</b>{' '}
-                    <i>(Offer price 20% off on Diwali occasion)</i>
+                    <b>Rs.2000</b> <i>(Introductory offer price 20% off)</i>
                   </li>
                   <li>
-                    Date: <b>28th Nov to 29th Nov</b>
+                    Date: <b>12th Dec to 13th Dec</b>
                   </li>
                 </ul>
                 <Box pl={3}>
