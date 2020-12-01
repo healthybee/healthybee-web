@@ -67,9 +67,6 @@ class Components extends React.Component {
                   <h1 className={classes.headingTxt}>
                     Eat Right. <br /> Love Yourself.
                   </h1>
-                  <h3 className={classes.subtitleTxt}>
-                    Happiness starts with healthy food.
-                  </h3>
                 </div>
               </GridItem>
             </GridContainer>

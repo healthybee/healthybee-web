@@ -38,15 +38,7 @@ const componentsStyle = {
     color: 'orangered',
     textStroke: '2px #fff4f4',
     fontFamily: 'fantasy',
-    fontSize: '5rem',
-    marginTop: '14%'
-  },
-  subtitleTxt: {
-    color: 'red',
-    textStroke: '1px #651a1a',
-    fontFamily: 'ui-monospace',
-    fontSize: '1.6rem',
-    marginTop: '12%'
+    fontSize: '5rem'
   }
 };
 
