@@ -10,7 +10,7 @@ import Box from '@material-ui/core/Box';
 // @material-ui/icons
 import GridContainer from '../../components/Grid/GridContainer.js';
 import GridItem from '../../components/Grid/GridItem.js';
-import Button from '../../components/CustomButtons/Button.js';
+// import Button from '../../components/CustomButtons/Button.js';
 
 //script tag
 import ScriptTag from 'react-script-tag';

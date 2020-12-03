@@ -11,7 +11,7 @@ import Footer from '../../components/Footer/Footer.js';
 import Parallax from '../../components/Parallax/Parallax.js';
 import GridContainer from '../../components/Grid/GridContainer.js';
 import GridItem from '../../components/Grid/GridItem.js';
-import Button from '../../components/CustomButtons/Button.js';
+// import Button from '../../components/CustomButtons/Button.js';
 import landingPageStyle from '../../assets/jss/material-kit-react/views/landingPage.js';
 import EventSection from './EventSection.js';
 import { Container } from '@material-ui/core';
