@@ -16,6 +16,9 @@ import landingPageStyle from '../../assets/jss/material-kit-react/views/landingP
 import EventSection from './EventSection.js';
 import { Container } from '@material-ui/core';
 
+//script tag
+import ScriptTag from 'react-script-tag';
+
 class Event extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
@@ -31,11 +34,14 @@ class Event extends React.Component {
               alignItems="flex-start"
             >
               <GridItem xs={12} sm={12} md={6}>
-                <h1>2 Days Detox Program</h1>
-                <h3> We give fresh juices for 2 days.</h3>
+                <h1 className={classes.headingTxt}>2 Days Detox Program</h1>
+                <h3 className={classes.subHeadingTxt}>
+                  {' '}
+                  We give fresh juices for 2 days.
+                </h3>
                 {/* <h4>Coming Soon ... please call us for more information .</h4> */}
                 {/* <h4>Mobile No: +91-8793580502.</h4> */}
-                <Button
+                {/* <Button
                   color="warning"
                   size="md"
                   href="https://docs.google.com/forms/d/e/1FAIpQLSdGs7k79V0rvpeiNfNIm6P6x9hdSXKYn6nhC0heQ_xkNW_CYw/viewform?embedded=true"
@@ -44,7 +50,15 @@ class Event extends React.Component {
                   round
                 >
                   Register Now
-                </Button>
+                </Button> */}
+                <form>
+                  <ScriptTag
+                    src="https://checkout.razorpay.com/v1/payment-button.js"
+                    data-payment_button_id="pl_G3N2KZhR0c7D5V"
+                  >
+                    {' '}
+                  </ScriptTag>{' '}
+                </form>
               </GridItem>
             </GridContainer>
           </Container>

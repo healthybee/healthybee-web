@@ -11,6 +11,10 @@ import Box from '@material-ui/core/Box';
 import GridContainer from '../../components/Grid/GridContainer.js';
 import GridItem from '../../components/Grid/GridItem.js';
 import Button from '../../components/CustomButtons/Button.js';
+
+//script tag
+import ScriptTag from 'react-script-tag';
+
 // core components
 import downloadStyle from '../../assets/jss/material-kit-react/views/componentsSections/downloadStyle.js';
 
@@ -99,9 +103,13 @@ class EventSection extends React.Component {
                   <li>
                     Date: <b>12th Dec to 13th Dec</b>
                   </li>
+                  <i>
+                    (Deliverable in Wakad, Baner, Hinjewadi, Dange Chowk,
+                    VishalNagar, Pimple Nilakh & Pimple Saudagar)
+                  </i>
                 </ul>
                 <Box pl={3}>
-                  <Button
+                  {/* <Button
                     color="warning"
                     size="md"
                     href="https://docs.google.com/forms/d/e/1FAIpQLSdGs7k79V0rvpeiNfNIm6P6x9hdSXKYn6nhC0heQ_xkNW_CYw/viewform?embedded=true"
@@ -110,7 +118,15 @@ class EventSection extends React.Component {
                     round
                   >
                     Register Now
-                  </Button>
+                  </Button> */}
+                  <form>
+                    <ScriptTag
+                      src="https://checkout.razorpay.com/v1/payment-button.js"
+                      data-payment_button_id="pl_G3N2KZhR0c7D5V"
+                    >
+                      {' '}
+                    </ScriptTag>{' '}
+                  </form>
                 </Box>
               </h4>
             </GridItem>
