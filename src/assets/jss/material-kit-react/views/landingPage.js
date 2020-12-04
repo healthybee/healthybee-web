@@ -33,14 +33,14 @@ const landingPageStyle = {
   },
   headingTxt: {
     color: 'orangered',
-    textStroke: '2px #fff4f4',
+    textStroke: '2px #410f0f',
     fontFamily: 'fantasy',
     fontSize: '5rem'
   },
   subHeadingTxt: {
     color: '#b51414',
     fontSize: '1.12rem',
-    fontFamily: 'cursive'
+    fontFamily: 'Roboto'
   }
 };
 
