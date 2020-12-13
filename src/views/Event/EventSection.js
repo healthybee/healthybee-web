@@ -101,7 +101,7 @@ class EventSection extends React.Component {
                     <b>Rs.2000</b> <i>(Introductory offer price 20% off)</i>
                   </li>
                   <li>
-                    Date: <b>12th Dec to 13th Dec</b>
+                    Date: <b>19th Dec to 20th Dec</b>
                   </li>
                   <i>
                     (Deliverable in Wakad, Baner, Hinjewadi, Dange Chowk,
