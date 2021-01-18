@@ -86,6 +86,12 @@ function Footer({ ...props }) {
               </ListItem>
             </List>
           </div>
+          <List>
+            <ListItem className={classes.inlineBlock}>
+              <Link to={'/terms'}>Terms & Conditions</Link> &nbsp;&nbsp;
+              <Link to={'/privacy'}>Privacy Policy</Link>
+            </ListItem>
+          </List>
         </div>
         <div className={classes.right}>
           &copy; {1900 + new Date().getYear()} , by HealthyBee.fit{' '}

@@ -23,6 +23,14 @@ const Components = Loadable({
     loader: () => import('../views/Event/Event'),
     loading: Loading
   }),
+  Privacy = Loadable({
+    loader: () => import('../views/Privacy/Privacy'),
+    loading: Loading
+  }),
+  Terms = Loadable({
+    loader: () => import('../views/Terms/Terms'),
+    loading: Loading
+  }),
   SubscriptionActivity = Loadable({
     loader: () => import('../views/Subscriptions/Subscriptions'),
     loading: Loading
@@ -43,6 +51,8 @@ let indexRoutes = [
     component: ProgramRegistration
   },
   { path: '/fitness-programs', name: 'Event', component: Event },
+  { path: '/privacy', name: 'Privacy', component: Privacy },
+  { path: '/terms', name: 'Event', component: Terms },
   {
     path: '/subscribe',
     name: 'Subscriptions',
