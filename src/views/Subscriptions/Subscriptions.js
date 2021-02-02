@@ -25,7 +25,9 @@ class Event extends React.Component {
           >
             <GridItem xs={12} sm={12} md={6}>
               <h4>Coming Soon ... please call us for more information .</h4>
-              <h4>Mobile No: +91-99756 90709.</h4>
+              <h4>
+                Mobile No: +91-99756 90709 &nbsp; or &nbsp; +91-87935 80502.
+              </h4>
             </GridItem>
           </GridContainer>
         </Container>

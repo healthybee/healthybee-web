@@ -101,7 +101,7 @@ export default function CustomizedDialogs() {
             </b>{' '}
           </h3>
           <h3 align="center">
-            <b>+91-99756 90709</b>
+            <b>+91-99756 90709 &nbsp; or &nbsp; +91-87935 80502</b>
           </h3>
         </DialogContent>
         {/* <DialogActions>
