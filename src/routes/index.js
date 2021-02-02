@@ -27,6 +27,10 @@ const Components = Loadable({
     loader: () => import('../views/Privacy/Privacy'),
     loading: Loading
   }),
+  Refund = Loadable({
+    loader: () => import('../views/Refund/Refund'),
+    loading: Loading
+  }),
   Terms = Loadable({
     loader: () => import('../views/Terms/Terms'),
     loading: Loading
@@ -52,6 +56,7 @@ let indexRoutes = [
   },
   { path: '/fitness-programs', name: 'Event', component: Event },
   { path: '/privacy', name: 'Privacy', component: Privacy },
+  { path: '/Refund', name: 'Refund', component: Refund },
   { path: '/terms', name: 'Event', component: Terms },
   {
     path: '/subscribe',

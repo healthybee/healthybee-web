@@ -35,9 +35,9 @@ const componentsStyle = {
     textAlign: 'center'
   },
   headingTxt: {
-    color: 'orangered',
-    textStroke: '2px #fff4f4',
-    fontFamily: 'fantasy',
+    color: '#d3c9c5',
+    textStroke: '2px #463e3e',
+    fontFamily: 'ui-sans-serif',
     fontSize: '5rem'
   }
 };

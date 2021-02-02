@@ -89,7 +89,8 @@ function Footer({ ...props }) {
           <List>
             <ListItem className={classes.inlineBlock}>
               <Link to={'/terms'}>Terms & Conditions</Link> &nbsp;&nbsp;
-              <Link to={'/privacy'}>Privacy Policy</Link>
+              <Link to={'/privacy'}>Privacy Policy</Link> &nbsp;&nbsp;
+              <Link to={'/refund'}>Return & Refund Policy</Link>
             </ListItem>
           </List>
         </div>
