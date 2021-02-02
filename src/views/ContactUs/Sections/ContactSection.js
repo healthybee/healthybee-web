@@ -31,7 +31,7 @@ class ContactSection extends React.Component {
                 branchAddress="Inside Silver Sports Club, Behind Vedanta Society, Shankar Kalat Nagar, Wakad, Pune - 411057"
                 branchTime="9:00AM-9:00PM"
                 branchEmail="healthybee.fit.wakad@gmail.com"
-                branchContactNumber="+91-92847 40370"
+                branchContactNumber="+91-99756 90709"
                 headerColor="warning"
               />
             </GridItem>
@@ -41,7 +41,7 @@ class ContactSection extends React.Component {
                 branchAddress="Shop no. 6,  Alacrity commercial complex, Behind Bitwise Terra Tower, By pass road, Pune - 411045"
                 branchTime="9:00AM-9:00PM"
                 branchEmail="healthybee.fit@gmail.com"
-                branchContactNumber="+91-93730 17614"
+                branchContactNumber="+91-99756 90709"
                 headerColor="warning"
               />
             </GridItem>
